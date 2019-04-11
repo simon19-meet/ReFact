@@ -11,6 +11,16 @@ def home():
 	if request.method=='GET':
 		return render_template('home.html')
 
+@app.route('/signup', methods=['GET','POST'])
+def signup():
+	if request.method == 'POST':
+		if request.form['choice'] == "volunteer":
+			return redirect(url_for('volunteer_signup'))
+		elif request.form['choice'] == "refugee":
+			return redirect(url_for('refugee_signup'))
+		else:
+			return redirect(url_for('Login'))
+	return render_template("signup.html")
 @app.route('/stories',methods=['GET'])
 def stories():
 	if request.method=='GET':
@@ -58,8 +68,8 @@ def Login():
 	if request.method=='GET':
 		return render_template('login.html')
 
-@app.route('/signup_refugee',methods=['GET','POST'])
-def signup_refugee():
+@app.route('/refugee_signup',methods=['GET','POST'])
+def refugee_signup():
 	if request.method=='POST':
 		signup_refugee(request.form['name'],
 			request.form['email'],
@@ -69,8 +79,8 @@ def signup_refugee():
 	if request.method=='GET':
 		return render_template('refugee_signup.html')
 
-@app.route('/signup_volunteer',methods=['GET','POST'])
-def signup_volunteer():
+@app.route('/volunteer_signup',methods=['GET','POST'])
+def volunteer_signup():
 	if request.method=='POST':
 		signup_volunteer(request.form['name'],
 			request.form['email'],

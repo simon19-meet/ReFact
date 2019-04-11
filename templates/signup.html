@@ -3,8 +3,12 @@
 
     </head>
     <body>
-        <button type="submit" name="volunteer">Volunteer</button>
-        <button type="submit" name="refugee">Refugee</button>
-
+        <form id="vol" action="/signup" method="POST">
+            <select name="choice">
+                    <option value="empty"></option>
+                    <option value="volunteer">volunteer</option>
+                    <option value="refugee">refugee</option>
+                </select>
+        </form>
     </body>
 </html>
