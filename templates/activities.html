@@ -6,11 +6,23 @@
                     <li>View Stories</li>
                     <li>Share Your Story</li>
                     <li>Sign Up</li>
+                    <li>Log In</li>
                     <li>Contact Us</li>
                     <li>Donate</li>
                 </ul>
     </head>
     <body>
-        
+        <center>
+            <table width="60%">
+                {% for i in activities %}
+            <tr><td class="post"><center>{{i.name}}</center><br>
+                {{i.description}}<br>
+                {{i.age}}<br>
+                {{i.date}}<br>
+                {{i.location}}<br>
+                {{i.leader}}</td></tr>
+                {% endfor %}
+            </table>
+        </center>
     </body>
 </html>

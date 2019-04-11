@@ -6,11 +6,21 @@
                     <li>View Stories</li>
                     <li>Share Your Story</li>
                     <li>Sign Up</li>
+                    <li>Log In</li>
                     <li>Contact Us</li>
                     <li>Donate</li>
                 </ul>
     </head>
     <body>
-        
+        <center>
+            <table width="50%">
+                {% for i in stories %}
+                <tr><td><center>{{i.name}}</center><br>
+                    {{i.email}}<br>
+                    {{i.age}}<br>
+                    {{i.content}}</td></tr>
+                {% endfor %}
+            </table>
+        </center>
     </body>
 </html>
