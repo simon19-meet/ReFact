@@ -1,16 +1,17 @@
 <html>
     <head>
         <title>Stories</title>
-            <ul>
-                    <li>HomePage</li>
-                    <li>Activities</li>
-                    <li>View Stories</li>
-                    <li>Share Your Story</li>
-                    <li>Sign Up</li>
-                    <li>Log In</li>
-                    <li>Contact Us</li>
-                    <li>Donate</li>
-                </ul>
+        <ul>
+            <li><a href="{{url_for('home')}}">HomePage</a></li>
+            <li><a href="{{url_for('Activities')}}">Activities</a></li>
+            <li><a href="{{url_for('stories')}}">View Stories</a></li>
+            <li><a href="{{url_for('share')}}">Share Your Story</a></li>
+            <li><a href="{{url_for('signup')}}">Sign Up</a></li>
+            <li><a href="{{url_for('Login')}}">Log In</a></li>
+            <li><a href="{{url_for('contact_us')}}">Contact Us</a></li>
+            <li><a href="{{url_for('Donate')}}">Donate</a></li>
+            <li><a>Add Event</a></li>
+        </ul>
     </head>
     <body>
         <h1>All Stories</h1>
