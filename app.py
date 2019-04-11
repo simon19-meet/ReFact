@@ -21,6 +21,7 @@ def signup():
 		else:
 			return redirect(url_for('Login'))
 	return render_template("signup.html")
+
 @app.route('/stories',methods=['GET'])
 def stories():
 	if request.method=='GET':
@@ -34,15 +35,36 @@ def share():
 		return redirect(url_for('stories'))
 	if request.method=='GET':
 		stories=query_all_stories()
-		return render_template('share.html')
+		return render_template('share.html', stories=stories)
 
 @app.route('/activities',methods=['GET','POST'])
 def Activities():
-	if request.method=='POST':
-		
 	if request.method=='GET':
 		activities=query_all_activities()
-		return render_template('activities.html')
+		return render_template('activities.html', activities=activities)
+
+@app.route('/activity/<int:activity_id>',methods=['GET','POST'])
+def Activity(activity_id):
+	if request.method=='POST':
+		if login_session['type']=='refugee':
+			activity=query_activity_by_id(activity_id)
+			update_activity_refugee(activity_id,activity.refugees+1)
+		if login_session['type']=='volunteer':
+			activity=query_activity_by_id(activity_id)
+			name=login_session['name']
+			update_activity_volunteer(activity_id,activity.volunteers+name)
+	if request.method=='GET':
+		activity=query_activity_by_id(activity_id)
+		return render_template('activities.html', activities=activities)
+
+@app.route('/add_activity',methods=['GET','POST'])
+def Add_activity():
+	if request.method=='POST':
+		volunteer=query_volunteer_by_email(login_session['email'])
+		add_activity(volunteer.name, request.form['description'], request.form['age'], 
+			request.form['date'], request.form['location'], volunteer.name)
+	if request.method=='GET':
+		return render_template('add_activity.html')
 
 @app.route('/donate',methods=['GET','POST'])
 def Donate():
@@ -62,7 +84,7 @@ def Login():
 		if volunteer!=None and volunteer.password==request.form['password']:
 			login_session['name'] = volunteer.name
 			login_session['email'] = volunteer.email
-			login_session['type'] = 'vounteer'
+			login_session['type'] = 'volunteer'
 			return redirect(url_for('home'))
 		return redirect(url_for('Login'))
 	if request.method=='GET':

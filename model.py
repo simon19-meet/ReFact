@@ -11,8 +11,8 @@ class Refugee(Base):
 	name=Column(String)
 	email=Column(String)
 	password=Column(String)
-	gender=column(String)
-	age=column(String)
+	gender=Column(String)
+	age=Column(String)
 
 class Volunteer(Base):
 	__tablename__="volunteers"
@@ -20,24 +20,24 @@ class Volunteer(Base):
 	name=Column(String)
 	email=Column(String)
 	password=Column(String)
-	gender=column(String)
-	age=column(String)
+	gender=Column(String)
+	age=Column(String)
 
 class Story(Base):
 	__tablename__="stories"
 	story_id=Column(Integer,primary_key=True)
 	name=Column(String)
 	email=Column(String)
-	age=column(String)
-	content=column(String)
+	age=Column(String)
+	content=Column(String)
 
-class Activty(Base):
+class Activity(Base):
 	__tablename__="activities"
 	activity_id=Column(Integer,primary_key=True)
 	name=Column(String)
 	description=Column(String)
-	age=column(String)
-	date=column(date)
-	location=column(String)
+	age=Column(String)
+	date=Column(String)
+	location=Column(String)
 	leader=Column(String)
-	volunteers= column()
+	volunteers=Column(String)

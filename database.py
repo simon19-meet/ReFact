@@ -38,7 +38,7 @@ def add_story(name, email, age, content):
 	session.add(story_object)
 	session.commit()
 
-def add_activity(name, description, age, date, location, leader)
+def add_activity(name, description, age, date, location, leader):
 	activity_object = Activity(
 		name=name,
 		description=description,
@@ -64,3 +64,17 @@ def query_all_stories():
 def query_all_activities():
 	activities = session.query(Activity).all()
 	return activities
+
+def query_activity_by_id(activity_id):
+	activity=session.query(Activity).filter_by(activity_id=activity_id).first()
+	return activity
+
+def update_activity_volunteer(activity_id,volunteers):
+	activity=session.query(Activity).filter_by(activity_id=activity_id).first()
+	activity.volunteers=volunteers
+	session.commit()
+
+def update_activity_refugee(activity_id,refugees):
+	activity=session.query(Activity).filter_by(activity_id=activity_id).first()
+	activity.refugees=refugees
+	session.commit()
