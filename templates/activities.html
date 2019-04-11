@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title>Activities</title>
             <ul>
                     <li>HomePage</li>
                     <li>Activities</li>
@@ -12,8 +13,9 @@
                 </ul>
     </head>
     <body>
+        <h1>Activities</h1>
         <center>
-            <form id="act" action=""></form>
+            <form id="act" action="/activities" method="GET">
             <table width="60%">
                 {% for i in activities %}
             <tr><td class="post"><center>{{i.name}}</center><br>
@@ -24,6 +26,7 @@
                 {{i.leader}}</td></tr>
                 {% endfor %}
             </table>
+            </form>
         </center>
     </body>
 </html>

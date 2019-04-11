@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title>Stories</title>
             <ul>
                     <li>HomePage</li>
                     <li>Activities</li>
@@ -12,7 +13,9 @@
                 </ul>
     </head>
     <body>
+        <h1>All Stories</h1>
         <center>
+            <form id="story" action="/stories" method="GET">
             <table width="50%">
                 {% for i in stories %}
                 <tr><td><center>{{i.name}}</center><br>
@@ -21,6 +24,7 @@
                     {{i.content}}</td></tr>
                 {% endfor %}
             </table>
+        </form>
         </center>
     </body>
 </html>
