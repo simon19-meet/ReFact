@@ -25,17 +25,18 @@ def signup():
 @app.route('/stories',methods=['GET'])
 def stories():
 	if request.method=='GET':
-		return render_template('stories.html')
+		stories=query_all_stories()
+		return render_template('stories.html', stories=stories)
 
 @app.route('/share',methods=['GET','POST'])
 def share():
 	if request.method=='POST':
-		refugee=query_user_by_email(login_session['email'])
+		refugee=query_refugee_by_email(login_session['email'])
 		add_story(refugee.name, refugee.email, refugee.age, request.form['content'])
 		return redirect(url_for('stories'))
 	if request.method=='GET':
 		stories=query_all_stories()
-		return render_template('share.html', stories=stories)
+		return render_template('share.html')
 
 @app.route('/activities',methods=['GET','POST'])
 def Activities():
@@ -61,8 +62,9 @@ def Activity(activity_id):
 def Add_activity():
 	if request.method=='POST':
 		volunteer=query_volunteer_by_email(login_session['email'])
-		add_activity(volunteer.name, request.form['description'], request.form['age'], 
+		add_activity(request.form['name'], request.form['description'], request.form['age'], 
 			request.form['date'], request.form['location'], volunteer.name)
+		return redirect(url_for('home'))
 	if request.method=='GET':
 		return render_template('add_activity.html')
 
@@ -97,7 +99,8 @@ def refugee_signup():
 			request.form['email'],
 			request.form['password'],
 			request.form['gender'],
-			request.form['age'],)
+			request.form['age'])
+		return redirect(url_for('home'))
 	if request.method=='GET':
 		return render_template('refugee_signup.html')
 
@@ -108,7 +111,8 @@ def volunteer_signup():
 			request.form['email'],
 			request.form['password'],
 			request.form['gender'],
-			request.form['age'],)
+			request.form['age'])
+		return redirect('/')
 	if request.method=='GET':
 		return render_template('volunteer_signup.html')
 

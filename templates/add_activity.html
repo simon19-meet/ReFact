@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Refugees Sign Up</title>
+        <title>Lead An Acivity</title>
         <ul>
             <li><a href="{{url_for('home')}}">HomePage</a></li>
             <li><a href="{{url_for('Activities')}}">Activities</a></li>
@@ -14,16 +14,14 @@
         </ul>
     </head>
     <body>
-        <h1>Refugees Sign Up</h1>
-        <form id="refs" action="/refugee_signup" method="POST">
-
-        <input type="text" name="name" placeholder="Full Name"><br>
-        <input type="text" name="email" placeholder="Email"><br>
-        <input type="text" name="age" placeholder="Age"><br>
-        <input type="radio" name="gender" value="Male">Male<br>
-        <input type="radio" name="gender" value="Female">Female<br>
-        <input type="password" name="password" placeholder="Password"><br>
-        <button type="submit" value="Sign Up">Sign Up</button>
-        </form>
+        <h1>Lead An Activity</h1>
+        <form id="Activity" action="/add_activity" method="POST">
+        <input type="text" name="name" placeholder="Activity name"><br>
+        <textarea name="description" placeholder="Description"></textarea><br>
+        <input type="text" name="age" placeholder="Age Range (X-Y)"><br>
+        <input type="text" name="date" placeholder="Date (dd/mm/yy)"> <br>
+        <input type="text" name="location" placeholder="location"> <br>
+        <button type="submit" name="post" value="Post">Submit</button>
+    </form>
     </body>
 </html>
