@@ -123,9 +123,7 @@ def contact_us():
 
 @app.route('/logout')
 def logout():
-	del login_session['email']
-	del login_session['name']
-	del login_session['type']
+	login_session.clear()
 	return redirect(url_for('home'))
 
 if __name__ == '__main__':
