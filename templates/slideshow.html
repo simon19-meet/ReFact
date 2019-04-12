@@ -1,7 +1,11 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <style>
-        ul {
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -102,10 +106,11 @@ li a:hover {
 .dropdown:hover .dropdown-content {
   display: block;
 } 
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
 
-
-    </style>
-            <title>Activities</title>
+</style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="home.css">
@@ -127,18 +132,58 @@ li a:hover {
     </div>
   </div>
 </div> 
-        </ul>
-    </head>
-    <body>
-        <h1>Contact us</h1><br>
-        <h2>Phone: +972 52 427 4456</h2>
-        <h2>Email: ReFact.meet@gmail.com</h2><br>
 
-        <h2>About Us</h2>
-        <p>ReFact is an organization that provides palestinian refugees with weekly <br>
-            fun activities lead by local and international volunteers in order to feel <br>
-            safe and alive!  ReFact gives a platform for palestinian refugees to share <br>
-            their stories to the world and together inspire the next generation.
-        </p>
-    </body>
-</html>
+        </ul>
+        
+
+</head>
+<body>
+
+<div class="w3-container">
+
+</div>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="h.jpg" style="width:400px, height:70px">
+  <img class="mySlides" src="u.jpg" style="width:400px, height:70px">
+  <img class="mySlides" src="m.jpeg" style="width:400px, height:70px">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</body>
+</html> 

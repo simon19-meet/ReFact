@@ -1,16 +1,133 @@
 <html>
     <head>
-        <title>Share Your Story</title>
+        <style>
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #696969;
+}
+
+li {
+  float: right;
+}
+
+
+i{
+    padding-left: 17px;
+    padding-top: 15px;
+    color: #C0C0C0;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #C0C0C0;
+}
+
+ /* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #696969;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
+
+
+    </style>
+            <title>Activities</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="home.css">
         <ul>
-            <li><a href="{{url_for('home')}}">HomePage</a></li>
-            <li><a href="{{url_for('Activities')}}">Activities</a></li>
-            <li><a href="{{url_for('stories')}}">View Stories</a></li>
-            <li><a href="{{url_for('share')}}">Share Your Story</a></li>
+            <li><a href="{{url_for('Donate')}}">Donate</a></li>
             <li><a href="{{url_for('signup')}}">Sign Up</a></li>
             <li><a href="{{url_for('Login')}}">Log In</a></li>
-            <li><a href="{{url_for('contact_us')}}">Contact Us</a></li>
-            <li><a href="{{url_for('Donate')}}">Donate</a></li>
-            <li><a>Add Event</a></li>
+
+ <div class="navbar">
+  <div class="dropdown">
+      <i class="fas fa-bars"></i>
+    <div class="dropdown-content">
+      <a href="{{url_for('home')}}">HomePage</a>
+      <a href="{{url_for('Activities')}}">Activities</a>
+      <a href="{{url_for('Add_activity')}}">Add Activity</a>
+      <a href="{{url_for('stories')}}">View Stories</a>
+      <a href="{{url_for('share')}}">Share Your Story</a>
+      <a href="{{url_for('contact_us')}}">Contact Us</a>
+    </div>
+  </div>
+</div> 
+
         </ul>
     </head>
     <body>
