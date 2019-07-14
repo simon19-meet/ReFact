@@ -9,34 +9,15 @@ Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-def signup_refugee(name, email, password, gender, age):
-	refugee_object = Refugee(
+def add_feedback(name, age, content):
+	feedback_object = Feedback(
 		name=name,
-		email=email,
-		password=password,
-		gender=gender,
-		age=age)
-	session.add(refugee_object)
-	session.commit()
-
-def signup_volunteer(name, email, password, gender, age):
-	volunteer_object = Volunteer(
-		name=name,
-		email=email,
-		password=password,
-		gender=gender,
-		age=age)
-	session.add(volunteer_object)
-	session.commit()
-
-def add_story(name, email, age, content):
-	story_object = Story(
-		name=name,
-		email=email,
 		age=age,
 		content=content)
-	session.add(story_object)
+	session.add(feedback_object)
 	session.commit()
+
+# ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 def add_activity(name, description, age, date, location, leader):
 	activity_object = Activity(
@@ -77,4 +58,24 @@ def update_activity_volunteer(activity_id,volunteers):
 def update_activity_refugee(activity_id,refugees):
 	activity=session.query(Activity).filter_by(activity_id=activity_id).first()
 	activity.refugees=refugees
+	session.commit
+
+def signup_refugee(name, email, password, gender, age):
+	refugee_object = Refugee(
+		name=name,
+		email=email,
+		password=password,
+		gender=gender,
+		age=age)
+	session.add(refugee_object)
+	session.commit()
+
+def signup_volunteer(name, email, password, gender, age):
+	volunteer_object = Volunteer(
+		name=name,
+		email=email,
+		password=password,
+		gender=gender,
+		age=age)
+	session.add(volunteer_object)
 	session.commit()
