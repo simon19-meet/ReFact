@@ -31,12 +31,15 @@ def stories():
 @app.route('/share',methods=['GET','POST'])
 def share():
 	if request.method=='POST':
-		refugee=query_refugee_by_email(login_session['email'])
-		add_story(refugee.name, refugee.email, refugee.age, request.form['content'])
-		return redirect(url_for('stories'))
+		if login_session['type'] == 'refugee':
+			refugee=query_refugee_by_email(login_session['email'])
+			add_story(refugee.name, refugee.email,refugee.age, request.form['content'])
+			return redirect(url_for('stories'))
+		else:
+			return redirect(url_for('home'))
 	if request.method=='GET':
 		stories=query_all_stories()
-		return render_template('share.html')
+		return render_template('share.html',stories=stories)
 
 @app.route('/activities',methods=['GET','POST'])
 def Activities():
@@ -56,7 +59,7 @@ def Activity(activity_id):
 			update_activity_volunteer(activity_id,activity.volunteers+name)
 	if request.method=='GET':
 		activity=query_activity_by_id(activity_id)
-		return render_template('activities.html', activities=activities)
+		return render_template('activities.html', activity=activity)
 
 @app.route('/add_activity',methods=['GET','POST'])
 def Add_activity():
