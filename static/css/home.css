@@ -1,10 +1,17 @@
 body{
-	 background-image: url("/static/images/l.jpeg");
+/*	 background-image: url("/static/images/l.jpeg");
 	 background-repeat: no-repeat;
 	 background-position: center;
 	 background-size: 100%;
 	 background-attachment: fixed;
-	 color: white;
+	 color: white;*/
+	background-color: black;
+	font-family: 'Titillium Web', Calibri, sans-serif;
+
+}
+*{
+	margin: 0;
+	padding: 0;
 }
 
 h2{
@@ -12,6 +19,40 @@ h2{
 }
 
 .n{
-	background-color:rgba(0,0,0,0.5)!important;
-	color: white;
+	width: 100%;
+	padding:20% 0;
+	background-image: url("/static/images/l.jpeg");
+	background-size: 100%;
 }
+
+/*.v {
+	margin-top: 10px;
+}*/
+
+nav ul{
+	width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	border-radius:63px;
+	background-color:rgba(255,255,255,0.5)!important;
+}
+
+nav ul li{
+	list-style:none;
+	display: inline-block;
+	text-align: center;
+}
+
+div ul li a{
+	display: block;
+	text-decoration: none;
+	padding: 40px 60px;
+	font-size: 20px;
+	color: #323642;
+	transition: background-color 0.5s ease;
+}
+
+div ul li a:hover{
+	background-color: #fff;
+}
+
