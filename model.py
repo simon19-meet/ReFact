@@ -13,6 +13,18 @@ class Feedback(Base):
 	age=Column(String)
 	content=Column(String)
 
+class Volunteer(Base):
+	__tablename__="volunteers"
+	volunteer_id=Column(Integer,primary_key=True)
+	name=Column(String)
+	email=Column(String)
+	gender=Column(String)
+	age=Column(String)
+	number=Column(string)
+	address=Column(string)
+	work=Column(string)
+	academic_level=Column(string)
+
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 class Activity(Base):
@@ -35,11 +47,3 @@ class Refugee(Base):
 	gender=Column(String)
 	age=Column(String)
 
-class Volunteer(Base):
-	__tablename__="volunteers"
-	volunteer_id=Column(Integer,primary_key=True)
-	name=Column(String)
-	email=Column(String)
-	password=Column(String)
-	gender=Column(String)
-	age=Column(String)

@@ -21,6 +21,16 @@ def about_us():
 
 @app.route('/volunteering', methods=['GET', 'POST'])
 def volunteering():
+	if request.method=='POST':
+		volunteer(request.form['name'], 
+			request.form['email'], 
+			request.form['gender'], 
+			request.form['age'], 
+			request.form['number'], 
+			request.form['address'], 
+			request.form['work'], 
+			request.form['academic_level'])
+		return redirect(url_for('thank_you'))
 	if request.method=='GET':
 		return render_template('volunteering.html')
 	#else:
@@ -29,6 +39,10 @@ def donations():
 	if request.method=='GET':
 		return render_template('donations.html')
 
+@app.route('/thank_you', methods=['GET'])
+def thank_you():
+	if request.method='GET':
+		return render_template('thank_you.html')
 
 if __name__ == '__main__':
 	app.run(debug=True)
