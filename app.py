@@ -32,7 +32,7 @@ def volunteering():
 			request.form['academic_level'])
 		return redirect(url_for('thank_you'))
 	if request.method=='GET':
-		return render_template('volunteering.html')
+		return render_template('volunteering_signup.html')
 	#else:
 @app.route('/donations', methods=['GET', 'POST'])
 def donations():
@@ -41,7 +41,7 @@ def donations():
 
 @app.route('/thank_you', methods=['GET'])
 def thank_you():
-	if request.method='GET':
+	if request.method=='GET':
 		return render_template('thank_you.html')
 
 if __name__ == '__main__':
