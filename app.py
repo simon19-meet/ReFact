@@ -44,6 +44,11 @@ def thank_you():
 	if request.method=='GET':
 		return render_template('thank_you.html')
 
+@app.route('/contact', methods=['GET'])
+def contact():
+	if request.method=='GET':
+		return render_template('contact.html')
+
 if __name__ == '__main__':
 	app.run(debug=True)
 
