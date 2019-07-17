@@ -17,6 +17,21 @@ def add_feedback(name, age, content):
 	session.add(feedback_object)
 	session.commit()
 
+def volunteer(name, email, gender, age, number, address, work, academic_level):
+	volunteer_object = Volunteer(
+		name=name,
+		email=email,
+		gender=gender,
+		age=age,
+		number=number,
+		address=address,
+		work=work,
+		academic_level=academic_level)
+	session.add(volunteer_object)
+	session.commit()
+
+
+
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 def add_activity(name, description, age, date, location, leader):
@@ -70,12 +85,3 @@ def signup_refugee(name, email, password, gender, age):
 	session.add(refugee_object)
 	session.commit()
 
-def signup_volunteer(name, email, password, gender, age):
-	volunteer_object = Volunteer(
-		name=name,
-		email=email,
-		password=password,
-		gender=gender,
-		age=age)
-	session.add(volunteer_object)
-	session.commit()

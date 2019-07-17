@@ -13,6 +13,18 @@ class Feedback(Base):
 	age=Column(String)
 	content=Column(Text)
 
+class Volunteer(Base):
+	__tablename__="volunteers"
+	volunteer_id=Column(Integer,primary_key=True)
+	name=Column(String)
+	email=Column(String)
+	gender=Column(String)
+	age=Column(String)
+	number=Column(String)
+	address=Column(String)
+	work=Column(String)
+	academic_level=Column(String)
+
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
