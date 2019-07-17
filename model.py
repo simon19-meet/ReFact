@@ -28,7 +28,7 @@ class Volunteer(Base):
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-class Gallery(Base):
+class Image(Base):
 	__tablename__="Gallery"
 	image_id=Column(Integer, primary_key=True)
 	image_path=Column(String)
