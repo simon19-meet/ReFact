@@ -33,7 +33,7 @@ def volunteering():
 		return redirect(url_for('thank_you'))
 	if request.method=='GET':
 		return render_template('volunteer.html')
-	#else:
+
 @app.route('/donations', methods=['GET', 'POST'])
 def donations():
 	if request.method=='GET':
