@@ -41,7 +41,7 @@ def donations():
 
 @app.route('/thank_you', methods=['GET'])
 def thank_you():
-	if request.method='GET':
+	if request.method=='GET':
 		return render_template('thank_you.html')
 
 if __name__ == '__main__':
