@@ -17,65 +17,38 @@ def add_feedback(name, age, content):
 	session.add(feedback_object)
 	session.commit()
 
-# ///////////////////////////////////////////////////////////////////////////////////////////////////
-
-def add_activity(name, description, age, date, location, leader):
-	activity_object = Activity(
-		name=name,
-		description=description,
-		age=age,
-		date=date,
-		location=location,
-		leader=leader)
-	session.add(activity_object)
-	session.commit()
-
-def query_refugee_by_email(email):
-	refugee = session.query(Refugee).filter_by(email=email).first()
-	return refugee
-
-def query_volunteer_by_email(email):
-	volunteer = session.query(Volunteer).filter_by(email=email).first()
-	return volunteer
-
-def query_all_stories():
-	stories = session.query(Story).all()
-	return stories
-
-def query_all_activities():
-	activities = session.query(Activity).all()
-	return activities
-
-def query_activity_by_id(activity_id):
-	activity=session.query(Activity).filter_by(activity_id=activity_id).first()
-	return activity
-
-def update_activity_volunteer(activity_id,volunteers):
-	activity=session.query(Activity).filter_by(activity_id=activity_id).first()
-	activity.volunteers=volunteers
-	session.commit()
-
-def update_activity_refugee(activity_id,refugees):
-	activity=session.query(Activity).filter_by(activity_id=activity_id).first()
-	activity.refugees=refugees
-	session.commit
-
-def signup_refugee(name, email, password, gender, age):
-	refugee_object = Refugee(
-		name=name,
-		email=email,
-		password=password,
-		gender=gender,
-		age=age)
-	session.add(refugee_object)
-	session.commit()
-
-def signup_volunteer(name, email, password, gender, age):
+def volunteer(name, email, gender, age, number, address, work, academic_level):
 	volunteer_object = Volunteer(
 		name=name,
 		email=email,
-		password=password,
 		gender=gender,
-		age=age)
+		age=age,
+		number=number,
+		address=address,
+		work=work,
+		academic_level=academic_level)
 	session.add(volunteer_object)
 	session.commit()
+
+
+# ///////////////////////////////
+#Gallery
+
+def add_image(path, title, content):
+	image=Image(
+		image_path=path,
+		image_title=title,
+		image_txt=content
+	)
+	session.add(image)
+	session.commit()
+
+def delete_image_by_id(id): #by id
+	session.query(Image).filter(Image.image_id==id).delete()
+	session.commit()
+
+def delete_image_by_path(path):
+	session.query(Image).filter(Image.image_path==path).delete()
+	session.commit()
+
+# ///////////////////////////////
