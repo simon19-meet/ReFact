@@ -19,7 +19,7 @@ def about_us():
 	if request.method=='GET':
 		return render_template('about_us.html')
 
-@app.route('/volunteering', methods=['GET', 'POST'])
+@app.route('/volunteer_signup', methods=['GET', 'POST'])
 def volunteering():
 	if request.method=='POST':
 		volunteer(request.form['name'], 
@@ -32,7 +32,7 @@ def volunteering():
 			request.form['academic_level'])
 		return redirect(url_for('thank_you'))
 	if request.method=='GET':
-		return render_template('volunteering.html')
+		return render_template('volunteer.html')
 	#else:
 @app.route('/donations', methods=['GET', 'POST'])
 def donations():

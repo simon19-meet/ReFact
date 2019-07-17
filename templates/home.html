@@ -21,7 +21,7 @@
       <div class="collapse navbar-collapse" id="navbarMenu">
           <ul class="navbar-nav">
               <li class="nav-item">
-                  <a href="#" class="nav-link">Home</a>
+                  <a href="{{url_for('home')}}" class="nav-link">Home</a>
               </li>
               <li class="nav-item">
                   <a href="#" class="nav-link">Contact Us</a>
@@ -45,10 +45,10 @@
     <div class="row" style="padding-top: 5%;">
       <div class="col-5"></div>
       <div class="col-1">
-        <button type="button">Volunteer</button>
+        <a href="{{url_for('volunteering')}}" type="button">Volunteer</a>
       </div>
       <div class="col-1">
-        <button type="button">Donate</button>
+        <a href="{{url_for('donations')}}" type="button">Donate</a>
       </div>
     </div>
     
