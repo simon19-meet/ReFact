@@ -1,3 +1,17 @@
+body{
+	 background-image: url("/static/images/l.jpeg");
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: 100%;
+	 background-attachment: fixed;
+	 color: white;
+}
+
 h2{
-	color: red;
+	color:white;
+}
+
+.n{
+	background-color:rgba(0,0,0,0.5)!important;
+	color: white;
 }
