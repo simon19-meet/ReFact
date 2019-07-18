@@ -1,46 +1,72 @@
 body{
-	background-image: url("/static/images/l.jpeg");
-	background-size: cover;
+	background: 
+		linear-gradient(
+			rgba(0, 0, 0, 0.45),
+			rgba(0, 0, 0, 0.45)),
+		url("/static/images/l.jpeg");
 	color: black;
 	margin-top: 10px;
+
+	margin:0px;
+	padding:0px;
+	font-family: akkurat pro, sans serif;
+
+	text-transform: uppercase;
+}
+
+
+#navbarMenu {
+	margin-left: 200%;
+	height: 1px;
+	white-space: nowrap;
 }
 
 h2{
 	color: white;
+	font-size: 60px;
+}
+
+#bg-image{
+	background:
+	url("/static/images/l.jpeg");
+}
+
+.img-responsive2{
+	size: 2px 4px;
+	margin-left: 2%;
 }
 
 .n{
-	width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-	position: center;
-	text-align: center;
-	border-radius:63px;
-	background-color:rgba(255,255,255,0.5)!important;
+	width: 100%;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+	/*position: center;*/
+	/*text-align: center;*/
+	background-color:white!important;
+	min-height: 80px;
 }
 
-nav ul{
+/*nav ul{
 	text-align: justify;
-	min-width: 100%;
+	min-width: 00%;
 }
+*/
+
 
 nav ul li {
     margin-left: auto;
     margin-right: auto;
+    float: right;
 }
-/*
-nav ul{
-    display: inline-block;
-    list-style-type: none;
-}
-*/
+
 nav ul li{
 	list-style:none;
 	display: inline-block;
 	display: block;
 	padding: 5px;
 	/*margin: 2px 15px;*/
-	text-align: center;
+	/*text-align: center;*/
+	text-align: right;
 }
 
 div ul li a{
@@ -48,6 +74,7 @@ div ul li a{
 	text-decoration: none;
 	color: #323642;
 	transition: background-color 0.5s ease;
+	float: right;
 }
 
 div ul li a:hover{
@@ -61,6 +88,7 @@ div ul li a:hover{
 	text-align: center;
 	border-radius: 8px;
 	text-decoration: none;
+	/*text-align: center;*/
 
 }
 
