@@ -52,3 +52,16 @@ def delete_image_by_path(path):
 	session.commit()
 
 # ///////////////////////////////
+
+def display_stories():
+	s=session.query(Story).all()
+	stories=[]
+	stories=s
+	print("display")
+	return stories
+
+def add_story(name,age,content,before,after):
+	story=Story(name=name,age=age,content=content)
+	session.add(story)
+	session.commit()
+	

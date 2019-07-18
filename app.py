@@ -2,6 +2,13 @@ from flask import Flask, render_template, url_for, redirect, request
 from database import *
 from flask import session as login_session
 import os
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+engine = create_engine('sqlite:///database.db')
+Base.metadata.create_all(engine)
+DBSession = sessionmaker(bind=engine)
+session = DBSession()
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
@@ -49,10 +56,39 @@ def contact():
 	if request.method=='GET':
 		return render_template('contact.html')
 
-@app.route('/share', methods=['GET'])
+@app.route('/share', methods=['GET','POST'])
 def share():
+	if request.method=='POST':
+		print("hi")
+		print(request.form['name'])
+		print(request.form['age'])
+		print(request.form['content'])
+
+
+		name=request.form['name']
+		age=request.form['age']
+		content=request.form['content']
+		print("hello")
+		picBefore=request.files['before']
+		picAfter=request.files['after']
+		print("lol")
+		picBefore.save('static/images/test')
+		picAfter.save('static/images/test2')
+		print("bad")
+		story=Story(name=name,age=age,content=content,before=picBefore.read(),after=picAfter.read())
+		session.add(story)
+		session.commit()
+		print("almost")
+		return render_template('view_stories.html')
+	return render_template('share.html')
+
+@app.route('/view_stories',methods=['GET'])
+def view():
+	print("hello viewer")
 	if request.method=='GET':
-		return render_template('share.html')
+		
+		stories=display_stories()
+		return render_template('view_stories.html',stories=stories)
 
 if __name__ == '__main__':
 	app.run(debug=True)
