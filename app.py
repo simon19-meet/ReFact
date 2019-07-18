@@ -58,35 +58,35 @@ def contact():
 
 @app.route('/share', methods=['GET','POST'])
 def share():
+	c=len(session.query(Story).all())
 	if request.method=='POST':
 		print("hi")
 		print(request.form['name'])
 		print(request.form['age'])
 		print(request.form['content'])
 
-
 		name=request.form['name']
 		age=request.form['age']
 		content=request.form['content']
-		print("hello")
 		picBefore=request.files['before']
 		picAfter=request.files['after']
-		print("lol")
-		picBefore.save('static/images/test')
-		picAfter.save('static/images/test2')
-		print("bad")
+		c+=1
+		strBef="static/images/before"
+		strBef+=str(c)
+		strAf="static/images/after"
+		strAf+=str(c)
+		picBefore.save(strBef)
+		picAfter.save(strAf)
 		story=Story(name=name,age=age,content=content,before=picBefore.read(),after=picAfter.read())
 		session.add(story)
 		session.commit()
-		print("almost")
-		return render_template('view_stories.html')
+		return redirect(url_for('view',c=c))
 	return render_template('share.html')
 
 @app.route('/view_stories',methods=['GET'])
 def view():
 	print("hello viewer")
 	if request.method=='GET':
-		
 		stories=display_stories()
 		return render_template('view_stories.html',stories=stories)
 

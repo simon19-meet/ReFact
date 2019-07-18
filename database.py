@@ -54,10 +54,8 @@ def delete_image_by_path(path):
 # ///////////////////////////////
 
 def display_stories():
-	s=session.query(Story).all()
-	stories=[]
-	stories=s
-	print("display")
+	stories=session.query(Story).all()
+	
 	return stories
 
 def add_story(name,age,content,before,after):
