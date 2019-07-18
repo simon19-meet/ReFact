@@ -6,11 +6,11 @@
     <h1>Stories</h1>
     <table width="50%">
             {% for i in stories %}
-            <tr><td ><center>Name: {{i.name}}</center><br>
+            <tr><td ><center>Name: {{i.name}}<br>
             Age: {{i.age}}<br>
             Story: {{i.content}}<br>
-            Before: {{i.before}}<br>
-            After: {{i.after}}</td></tr>
+            Before: <img src="/static/images/before{{i.id}}"><br>
+            After: <img src="/static/images/after{{i.id}}"></center></td></tr>
             {% endfor %}
         </table>
     </form>
