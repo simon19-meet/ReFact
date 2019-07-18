@@ -2,5 +2,17 @@
 <head>
 </head>
 <body>
+    <form id="view" method="GET" action="/view_stories">
+    <h1>Stories</h1>
+    <table width="50%">
+            {% for i in stories %}
+            <tr><td ><center>Name: {{i.name}}</center><br>
+            Age: {{i.age}}<br>
+            Story: {{i.content}}<br>
+            Before: {{i.before}}<br>
+            After: {{i.after}}</td></tr>
+            {% endfor %}
+        </table>
+    </form>
 </body>
 </html>
