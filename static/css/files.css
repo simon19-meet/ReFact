@@ -17,7 +17,7 @@
 
 .inputfile:focus + label,
 .inputfile + label:hover {
-    background-color: red;
+    background-color: #6B7433;
 }
 
 .inputfile + label {
