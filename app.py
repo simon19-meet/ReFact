@@ -4,7 +4,7 @@ from flask import session as login_session
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-s
+
 
 engine = create_engine('sqlite:///database.db?check_same_thread=False')
 Base.metadata.create_all(engine)
