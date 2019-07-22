@@ -11,6 +11,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/volunteer.css">
+
             <title>Activities</title>
 </head>
 <body>
@@ -41,17 +43,18 @@
   </nav>
 
         </ul>
-
-        <h1>Volunteer Sign Up</h1>
+<br><br>
+        <h1>Sign Up As volunteer</h1>
         <form id="vol" action="/volunteer_signup" method="POST">
-        <input type="text" name="name" placeholder="Full Name"><br>
-        <input type="text" name="email" placeholder="Email"><br>
-        <input type="text" name="age" placeholder="Age"><br>
-        <input type="radio" name="gender" value="Male">Male<br>
-        <input type="radio" name="gender" value="Female">Female<br>
-        <input type="text" name="number" placeholder="Phone Number"><br>
-        <input type="text" name="address" placeholder="Address"><br>
-        <input type="text" name="work" placeholder="Working Field"><br>
+        <input type="text" name="name" placeholder="Full Name"><br><br>
+        <input type="text" name="email" placeholder="Email"><br><br>
+        <input type="text" name="age" placeholder="Age"><br><br>
+        <input type="radio" name="gender" value="Male" style="color: white;"><h4>Male</h4>
+        <br>
+        <input type="radio" name="gender" value="Female"><h4>Female</h4><br><br>
+        <input type="text" name="number" placeholder="Phone Number"><br><br>
+        <input type="text" name="address" placeholder="Address"><br><br>
+        <input type="text" name="work" placeholder="Working Field"><br><br>
         <select name="academic_level">
           <option >choose your academic level</option>
           <option value="elementary">Elementary School</option>
