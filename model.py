@@ -46,3 +46,9 @@ class Story(Base):
 	content=Column(String)
 	before=Column(LargeBinary)
 	after=Column(LargeBinary)
+
+class Subscription(Base):
+    __tablename__="emails"
+    id=Column(Integer, primary_key=True)
+    name= Column(String)
+    email=Column(String)
