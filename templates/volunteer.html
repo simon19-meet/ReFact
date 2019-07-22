@@ -1,119 +1,18 @@
 <html>
     <head>
-        <style>
-        ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #696969;
-}
 
-li {
-  float: right;
-}
-
-
-i{
-    padding-left: 17px;
-    padding-top: 15px;
-    color: #C0C0C0;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #C0C0C0;
-}
-
- /* Navbar container */
-.navbar {
-  overflow: hidden;
-  background-color: #696969;
-  font-family: Arial;
-}
-
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* The dropdown container */
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-} 
-
-
-    </style>
     <!-- Required meta tags -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1s">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/volunteer.css">
             <title>Activities</title>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <!-- <nav class="navbar navbar-expand-sm navbar-light bg-light">
       <a href="{{url_for('home')}}" class="navbar-brand">Refact</a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
           <span class="navbar-toggler-icon"></span>
@@ -134,10 +33,34 @@ li a:hover {
                           </li>
           </ul>
       </div>
+  </nav> -->
+</head>
+<body>
+
+<nav class="n navbar navbar-expand-sm navbar-light bg-light">
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="#"><img class="img-responsive2"       
+       src="/static/images/logo.png" width="60" height="57"></a>
+          <ul class="navbar-nav">
+      <div class="v collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav">
+              <li style="text-align: right" class="nav-item">
+                  <a href="{{url_for('home')}}" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url_for('about_us')}}" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+                              <a href="{{url_for('share')}}" class="nav-link">Share Your Story</a>
+                          </li>
+          </ul>
+      </div>
   </nav>
+
         </ul>
-    </head>
-    <body>
+
         <h1>Volunteer Sign Up</h1>
         <form id="vol" action="/volunteer_signup" method="POST">
         <input type="text" name="name" placeholder="Full Name"><br>
