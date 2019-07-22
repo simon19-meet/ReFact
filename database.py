@@ -62,4 +62,13 @@ def add_story(name,age,content,before,after):
 	story=Story(name=name,age=age,content=content)
 	session.add(story)
 	session.commit()
-	
+
+
+def get_all_subs():
+	subs= session.query(Subscription).all()
+	return subs
+
+def add_sub():
+	sub=Subscription(name="emkay",email="matveycraft@gmail.com")
+	session.add(sub)
+	session.commit()

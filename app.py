@@ -1,9 +1,10 @@
 from flask import Flask, render_template, url_for, redirect, request
-from database import *
+from database import * 	
 from flask import session as login_session
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+s
 
 engine = create_engine('sqlite:///database.db?check_same_thread=False')
 Base.metadata.create_all(engine)
@@ -12,6 +13,8 @@ session = DBSession()
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
+
+
 
 @app.route('/',methods=['GET','POST'])
 def home():
@@ -89,6 +92,9 @@ def view():
 	if request.method=='GET':
 		stories=display_stories()
 		return render_template('view_stories.html',stories=stories)
+
+
+
 
 if __name__ == '__main__':
 	app.run(debug=True)
