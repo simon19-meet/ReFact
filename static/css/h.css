@@ -17,6 +17,7 @@ body{
 }
 
 
+
 .fa-facebook {
   background: #3B5998;
   color: white;
@@ -41,7 +42,7 @@ body{
 
 
 #navbarMenu {
-	margin-left: 260%;
+	/*margin-left: 260%;*/
 	height: 1px;
 	white-space: nowrap;
 }
