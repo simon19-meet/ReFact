@@ -68,22 +68,6 @@ h3{
 	color:white;
 }
 
-.team{
-	height: 200px;
-	border-radius: 50%;
-	max-width: 180px;
-}
-
-.roles{
-	color: grey;
-	text-decoration: bold;
-}
-
-.about_us{
-	color:white;
-	text-align: center;
-}
-
 #bg-image{
 	background:
 	url("/static/images/l.jpeg");
