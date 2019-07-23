@@ -11,9 +11,11 @@
     
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="/static/css/h.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/view.css">
     
         <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+        <!-- <link rel="stylesheet" type="text/css" href="/static/css/view.css"> -->
+
 
         <nav class="n navbar navbar-expand-sm navbar-light bg-light">
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
@@ -46,8 +48,9 @@
             <tr><td ><center>Name: {{i.name}}<br>
             Age: {{i.age}}<br>
             Story: {{i.content}}<br>
-            Before: <img src="/static/images/before{{i.id}}" style="width: 700px;height: 300px;"><br>
-            After: <img src="/static/images/after{{i.id}}" style="width: 700px;height: 300px;"></center></td></tr>
+            <!-- Before: <img src="/static/images/before{{i.id}}" style="width: 400px;height: 200px;"><br> -->
+            Before: <img src="/static/images/before{{i.id}}" style="max-width: 50%; max-height: 50%;"><br>
+            After: <img src="/static/images/after{{i.id}}" style="max-width: 50%; max-height: 50%;"></center></td></tr>
             {% endfor %}
         </table>
     </form>
