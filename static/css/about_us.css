@@ -1,9 +1,5 @@
 body{
-	background: 
-		linear-gradient(
-			rgba(0, 0, 0, 0.45),
-			rgba(0, 0, 0, 0.45)),
-		url("/static/images/camp5.jpg");
+	background-color: #6B7433;
 	color: black;
 	/*margin-top: 10px;*/
 
@@ -64,6 +60,9 @@ h1{
 
 h3{
 	color:white;
+	font-size: 30px;
+	font-weight: bold;
+	font-family:akkurat pro, sans serif;
 }
 
 .team{
@@ -75,18 +74,18 @@ h3{
 
 .roles{
 	color:white;
-	font-weight: bold;	
-	font-family: 
+	font-size: 28px;
 }
 
 .about_us{
 	color:white;
 	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 #bg-image{
-	background:
-	url("/static/images/l.jpeg");
+	background-color: #6B7433;
 }
 
 .img-responsive2{
