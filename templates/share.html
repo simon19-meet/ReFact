@@ -13,6 +13,7 @@
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/static/css/buttons.css">
   <link rel="stylesheet" href="/static/css/files.css">
+  <link rel="stylesheet" href="/static/css/share.css">
 
 
 
@@ -43,19 +44,21 @@
                 </ul>
             </div>
         </nav>
-        <h1>Share Your experience</h1>
+           <center><h1>Share Your experience</h1>
         <form id="share" action="/share" method="POST" enctype="multipart/form-data" >
-        <input type="text" name="name" placeholder="Name"><br>
-        <input type="text" name="age" placeholder="Age"><br>
-        <textarea name="content" placeholder="Your Story"></textarea>
+        <input type="text" name="name" placeholder="Name" class="info"><br>
+        <input type="text" name="age" placeholder="Age" class="info"><br>
+        <textarea name="content" placeholder="Your Story" class="info"></textarea>
         <h2>A picture before: </h2>
         <input type="file" name="before" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-        <label for="file">Choose a file</label><br>
+        <label for="file" style="width:50%">Choose a File</label><br>
         <h2>A picture after: </h2>
         <input type="file" name="after" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-        <label for="file">Choose a file</label><br>
-        <input type="submit" class="action-button shadow animate green">
+        <label for="file" style="width:50%">Choose a File</label><br>
+        <input type="submit" class="action-button shadow animate green" style="margin-left: 25%;width:50%">
         </form>
+        </center>
+   
         <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
