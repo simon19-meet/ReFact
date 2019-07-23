@@ -81,10 +81,16 @@ h3{
 	background-color: black;
 	padding-left: 50px;
 	padding-right: 50px;
+	font-size:20px;
 }
 .about_us{
 	color:white;
 	text-align: center;
+}
+
+.group_pic{
+	background-image: url("/static/images/group_pic.JPG");
+	background-size: 1000px 500px;
 }
 
 #bg-image{
