@@ -77,11 +77,14 @@ h3{
 	font-size: 28px;
 }
 
+.bg_about{
+	background-color: black;
+	padding-left: 50px;
+	padding-right: 50px;
+}
 .about_us{
 	color:white;
 	text-align: center;
-	padding-left: 50px;
-	padding-right: 50px;
 }
 
 #bg-image{
