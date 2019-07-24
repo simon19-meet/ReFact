@@ -1,5 +1,28 @@
 body{
 	background-image: url("/static/images/camp6.jpg");
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
+	margin: 0;
+}
+
+table {
+    border-collapse: separate;
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    border-spacing: 2px;
+    font-variant: normal;
+}
+
+
+.story{
+    background-image: url("/static/images/green-wallpaper-10.jpg");
+    background-attachment: fixed;
+	
+	border-radius: 40px;
+    padding: 10px 10px 10px 10px;
 }
