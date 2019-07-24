@@ -41,19 +41,20 @@
                     </ul>
                 </div>
             </nav>
-    <form id="view" method="GET" action="/view_stories">
+    <center><form id="view" method="GET" action="/view_stories">
     <h1>Stories</h1>
     <table width="50%">
             {% for i in stories %}
-            <tr><td ><center>Name: {{i.name}}<br>
+            <tr><td class="story">Name: {{i.name}}<br>
             Age: {{i.age}}<br>
             Story: {{i.content}}<br>
             <!-- Before: <img src="/static/images/before{{i.id}}" style="width: 400px;height: 200px;"><br> -->
-            Before: <img src="/static/images/before{{i.id}}" style="max-width: 50%; max-height: 50%;"><br>
-            After: <img src="/static/images/after{{i.id}}" style="max-width: 50%; max-height: 50%;"></center></td></tr>
+            Before: <img src="/static/images/before{{i.id}}" style="max-width: 50%; max-height: 50%;">
+            After: <img src="/static/images/after{{i.id}}" style="max-width: 50%; max-height: 50%;"></td></tr><br><br>
+            <script>setBackground();</script>
             {% endfor %}
         </table>
-    </form>
+    </form></center>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
