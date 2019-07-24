@@ -27,22 +27,22 @@
                 <div class="v collapse navbar-collapse" id="navbarMenu">
                     <ul class="navbar-nav">
                         <li style="text-align: right" class="nav-item">
-                            <a href="{{url_for('home')}}" class="nav-link">בית</a>
+                            <a href="{{url_for('home_he')}}" class="nav-link">בית</a>
                         </li>
                         <li class="nav-item">
-                          <a href="{{url_for('about_us')}}" class="nav-link">עלינו</a>
+                          <a href="{{url_for('about_us_he')}}" class="nav-link">עלינו</a>
                       </li>
                       <li class="nav-item">
-                                        <a href="{{url_for('share')}}" class="nav-link">שתף סיפור</a>
+                                        <a href="{{url_for('share_he')}}" class="nav-link">שתף סיפור</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a href="{{url_for('view')}}" class="nav-link">צפנ בכל הסיפורים</a>
+                                      <a href="{{url_for('view_he')}}" class="nav-link">צפנ בכל הסיפורים</a>
                                   </li>
                     </ul>
                 </div>
             </nav>
 
-    <center><form id="view" method="GET" action="/view_stories">
+    <center><form id="view" method="GET" action="/view_stories_he">
     <h1>Stories</h1>
     <table width="60%">
             {% for i in stories %}

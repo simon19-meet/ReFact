@@ -22,23 +22,25 @@
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
           <span class="navbar-toggler-icon"></span>
       </button>
-      <a href="#"><img class="img-responsive2"       
+      <a href="{{url_for('home')}}"><img class="img-responsive2"       
        src="/static/images/logo.png" width="60" height="57"></a>
           <ul class="navbar-nav">
       <div class="v collapse navbar-collapse" id="navbarMenu">
           <ul class="navbar-nav">
               <li style="text-align: right" class="nav-item">
-                  <a href="{{url_for('home')}}" class="nav-link">בית</a>
+                  <a href="{{url_for('home_he')}}" class="nav-link">בית</a>
               </li>
               <li class="nav-item">
-                <a href="{{url_for('about_us')}}" class="nav-link">עלינו</a>
+                <a href="{{url_for('about_us_he')}}" class="nav-link">עלינו</a>
             </li>
             <li class="nav-item">
-                              <a href="{{url_for('share')}}" class="nav-link">שתף סיפור</a>
+                              <a href="{{url_for('share_he')}}" class="nav-link">שתף סיפור</a>
                           </li>
                           <li class="nav-item">
-                            <a href="{{url_for('view')}}" class="nav-link">צפה בכל הסיפורים</a>
+                            <a href="{{url_for('view_he')}}" class="nav-link">צפה בכל הסיפורים</a>
                         </li>
+
+            </li>
           </ul>
       </div>
   </nav>
@@ -55,11 +57,11 @@
     <div class="row" style="padding-top: 5%;">
       <div class="col-sm"></div>
       <div class="col-sm col1">
-        <center><a class="btn btn-primary center-block" href="{{url_for('volunteering')}}" role="button">התנדבו</a></center>
+        <center><a class="btn btn-primary center-block" href="{{url_for('volunteering_he')}}" role="button">התנדבו</a></center>
       </div>
       <div class="col-sm"></div>
       <div class="col-sm col1">
-       <center> <a class="btn btn-primary center-block" style="text-decoration:none" href="{{url_for('donations')}}" role="button">תרמו</a>
+       <center> <a class="btn btn-primary center-block" style="text-decoration:none" href="{{url_for('donations_he')}}" role="button">תרמו</a>
       </div>
       <div class="col-sm"></div>
     </div>

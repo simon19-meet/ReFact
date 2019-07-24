@@ -30,22 +30,22 @@
             <div class="v collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav">
                     <li style="text-align: right" class="nav-item">
-                        <a href="{{url_for('home')}}" class="nav-link">בית</a>
+                        <a href="{{url_for('home_he')}}" class="nav-link">בית</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{{url_for('about_us')}}" class="nav-link">עלינו</a>
+                      <a href="{{url_for('about_us_he')}}" class="nav-link">עלינו</a>
                   </li>
                   <li class="nav-item">
-                                    <a href="{{url_for('share')}}" class="nav-link">שתף סיפור</a>
+                                    <a href="{{url_for('share_he')}}" class="nav-link">שתף סיפור</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a href="{{url_for('view')}}" class="nav-link">צפה בכל הסיפורים</a>
+                                  <a href="{{url_for('view_he')}}" class="nav-link">צפה בכל הסיפורים</a>
                               </li>
                 </ul>
             </div>
         </nav>
            <center><h1>שתף את החוויה שלך</h1>
-        <form id="share" action="/share" method="POST" enctype="multipart/form-data" >
+        <form id="share" action="/share_he" method="POST" enctype="multipart/form-data" >
         <input type="text" name="name" placeholder="שם" class="info"><br>
         <input type="text" name="age" placeholder="גיל" class="info"><br>
         <textarea name="content" placeholder="הסיפור שלך" class="info"></textarea>
