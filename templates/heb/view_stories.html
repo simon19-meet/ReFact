@@ -27,30 +27,30 @@
                 <div class="v collapse navbar-collapse" id="navbarMenu">
                     <ul class="navbar-nav">
                         <li style="text-align: right" class="nav-item">
-                            <a href="{{url_for('home')}}" class="nav-link">בית</a>
+                            <a href="{{url_for('home')}}" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                          <a href="{{url_for('about_us')}}" class="nav-link">עלינו</a>
+                          <a href="{{url_for('about_us')}}" class="nav-link">About Us</a>
                       </li>
                       <li class="nav-item">
-                                        <a href="{{url_for('share')}}" class="nav-link">שתף סיפור</a>
+                                        <a href="{{url_for('share')}}" class="nav-link">Share Your Story</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a href="{{url_for('view')}}" class="nav-link">צפנ בכל הסיפורים</a>
+                                      <a href="{{url_for('view')}}" class="nav-link">View All Stories</a>
                                   </li>
                     </ul>
                 </div>
             </nav>
     <form id="view" method="GET" action="/view_stories">
-    <h1>סיפורים</h1>
+    <h1>Stories</h1>
     <table width="50%">
             {% for i in stories %}
-            <tr><td ><center>שם: {{i.name}}<br>
-            גיל: {{i.age}}<br>
-            סיפור: {{i.content}}<br>
+            <tr><td ><center>Name: {{i.name}}<br>
+            Age: {{i.age}}<br>
+            Story: {{i.content}}<br>
             <!-- Before: <img src="/static/images/before{{i.id}}" style="width: 400px;height: 200px;"><br> -->
-            לפני: <img src="/static/images/before{{i.id}}" style="max-width: 50%; max-height: 50%;"><br>
-            אחרי: <img src="/static/images/after{{i.id}}" style="max-width: 50%; max-height: 50%;"></center></td></tr>
+            Before: <img src="/static/images/before{{i.id}}" style="max-width: 50%; max-height: 50%;"><br>
+            After: <img src="/static/images/after{{i.id}}" style="max-width: 50%; max-height: 50%;"></center></td></tr>
             {% endfor %}
         </table>
     </form>
