@@ -1,4 +1,4 @@
-<html>
+<html lang="he">
     <head>
 
     <!-- Required meta tags -->
@@ -27,16 +27,16 @@
       <div class="v collapse navbar-collapse" id="navbarMenu">
           <ul class="navbar-nav">
               <li style="text-align: right" class="nav-item">
-                  <a href="{{url_for('home')}}" class="nav-link">Home</a>
+                  <a href="{{url_for('home')}}" class="nav-link">בית</a>
               </li>
               <li class="nav-item">
-                <a href="{{url_for('about_us')}}" class="nav-link">About Us</a>
+                <a href="{{url_for('about_us')}}" class="nav-link">עלינו</a>
               </li>
               <li class="nav-item">
-                  <a href="{{url_for('share')}}" class="nav-link">Share Your Story</a>
+                  <a href="{{url_for('share')}}" class="nav-link">שתף סיפור</a>
               </li>
               <li class="nav-item">
-                <a href="{{url_for('view')}}" class="nav-link">View All Stories</a>
+                <a href="{{url_for('view')}}" class="nav-link">צפה בכל הסיפורים</a>
               </li>
           </ul>
       </div>
@@ -44,21 +44,21 @@
 
         </ul>
 <br><br>
-        <h1>Sign Up As volunteer</h1>
+        <h1>הרשם בתור מתנדב</h1>
         <form id="vol" action="/volunteer_signup" method="POST">
-        <input type="text" name="name" placeholder="Full Name"><br><br>
-        <input type="text" name="email" placeholder="Email"><br><br>
-        <input type="text" name="age" placeholder="Age"><br><br>
+        <input type="text" name="name" placeholder="שם מלא"><br><br>
+        <input type="text" name="email" placeholder="כתובת אימייל"><br><br>
+        <input type="text" name="age" placeholder="גיל"><br><br>
         <div class="row">
           <div class="col"> </div>
-        <div class="col"><input type="radio" name="gender" value="Male" style="color: white;"><h4>Male</h4></div>
+        <div class="col"><input type="radio" name="gender" value="Male" style="color: white;"><h4>זכר</h4></div>
         <br>
-        <div class="col"><input type="radio" name="gender" value="Female"><h4>Female</h4>
+        <div class="col"><input type="radio" name="gender" value="Female"><h4>נקבה</h4>
         </div>
       <div class="col"> </div>
 </div>
-        <input type="text" name="number" placeholder="Phone Number"><br><br>
-        <input type="text" name="address" placeholder="Address"><br><br>
+        <input type="text" name="number" placeholder="מספר טלפון"><br><br>
+        <input type="text" name="address" placeholder="כתובת"><br><br>
         <input type="text" name="work" placeholder="Working Field"><br><br>
         <select name="academic_level">
           <option >choose your academic level</option>

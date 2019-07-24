@@ -22,7 +22,7 @@ def home():
 		add_feedback(request.form['name'],request.form['age'],request.form['content'])
 		return redirect(url_for('home'))
 	if request.method=='GET':
-		return render_template('home.html')
+		return render_template('home.html', lang='he')
 
 @app.route('/about_us',methods=['GET'])
 def about_us():
