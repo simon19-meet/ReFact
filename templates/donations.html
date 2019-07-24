@@ -1,13 +1,19 @@
+<!-- <!DOCTYPE html> -->
 <html>
     <head>
         <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
     <link rel="stylesheet" type="text/css" href="/static/css/donate.css">
+
+
 
     </head>
     <body>
@@ -35,19 +41,61 @@
                 </ul>
             </div>
         </nav>
+<h2> DONATE</h2>
+<h3>Support The Refugees</h3>
+
     <div class="donation">
-        <div id="donate" class="box white"></div>
+        <div id="donate" class="box white">
                 <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        	<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
-       <script>paypal.Buttons().render('#donate');</script>
-           
+
+
+            <div class="row">
+              <div class="col-sm"></div>
+              <div class="col-sm col1">
+                <!-- <center><a class="btn btn-primary center-block" onclick="window.open('https://www.quackit.com/javascript/examples/sample_popup.cfm','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" role="button">Donate Money</a></center> -->
+                <center><a id="leen" class="btn btn-primary center-block" href="{{url_for('paypal')}}" onclick="centeredPopup(this.href,'myWindow','700','300','yes');return false" role="button">Donate Money</a></center>
+              </div>
+              <div class="col-sm"></div>
+              <div class="col-sm col1">
+               <center> <a class="btn btn-primary center-block" onclick="centeredPopup(this.href,'myWindow','700','300','yes');return false" href="{{url_for('material')}}" role="button">Donate Material</a></center>
+              </div>
+              <div class="col-sm"></div>
+            </div>
+            <hr/>
+            <div id="contact">
+                  <center><h1>contact Us</h1>
+
+                    <a href="https://www.facebook.com/ReFact.meet/?modal=admin_todo_tour" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/refact.y3/" class="fa fa-instagram"></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Refact.meet@gmail.com&su=SUBJECT&body=BODY&bcc=Refact.meet@gmail.com" class="fa fa-google"></a>
+                    </center>
+              </div>
+
+
+    </div>
+  </div>
+  <div>
+
+
+
+<script type="text/javascript">
+        function basicPopup(url) {
+popupWindow = window.open(url,'popUpWindow','height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+    }
+
+    var popupWindow = null;
+function centeredPopup(url,winName,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings =
+'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+popupWindow = window.open(url,winName,settings)
+}
+</script>
+
        </div>
     </div>
 
-    <!-- <div class="box white   "></div> -->
     </body>
 </html>

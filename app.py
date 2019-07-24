@@ -14,7 +14,15 @@ session = DBSession()
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
+@app.route('/material', methods=['GET'])
+def material():
+	if request.method=='GET':
+		return render_template('material.html')
 
+@app.route('/paypal', methods=['GET'])
+def paypal():
+	if request.method=='GET':
+		return render_template('paypal.html')
 
 @app.route('/',methods=['GET','POST'])
 def home():
