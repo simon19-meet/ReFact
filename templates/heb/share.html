@@ -30,31 +30,31 @@
             <div class="v collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav">
                     <li style="text-align: right" class="nav-item">
-                        <a href="{{url_for('home')}}" class="nav-link">בית</a>
+                        <a href="{{url_for('home')}}" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{{url_for('about_us')}}" class="nav-link">עלינו</a>
+                      <a href="{{url_for('about_us')}}" class="nav-link">About Us</a>
                   </li>
                   <li class="nav-item">
-                                    <a href="{{url_for('share')}}" class="nav-link">שתף סיפור</a>
+                                    <a href="{{url_for('share')}}" class="nav-link">Share Your Story</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a href="{{url_for('view')}}" class="nav-link">צפה בכל הסיפורים</a>
+                                  <a href="{{url_for('view')}}" class="nav-link">View All Stories</a>
                               </li>
                 </ul>
             </div>
         </nav>
-           <center><h1>שתף את החוויה שלך</h1>
+           <center><h1>Share Your experience</h1>
         <form id="share" action="/share" method="POST" enctype="multipart/form-data" >
-        <input type="text" name="name" placeholder="שם" class="info"><br>
-        <input type="text" name="age" placeholder="גיל" class="info"><br>
-        <textarea name="content" placeholder="הסיפור שלך" class="info"></textarea>
-        <h2>:תמונה לפני</h2>
+        <input type="text" name="name" placeholder="Name" class="info"><br>
+        <input type="text" name="age" placeholder="Age" class="info"><br>
+        <textarea name="content" placeholder="Your Story" class="info"></textarea>
+        <h2>A picture before: </h2>
         <input type="file" name="before" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-        <label for="file" style="width:50%">בחר קובץ</label><br>
-        <h2>:תמונה אחרי</h2>
+        <label for="file" style="width:50%">Choose a File</label><br>
+        <h2>A picture after: </h2>
         <input type="file" name="after" id="file1" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-        <label for="file1" style="width:50%">בחר קובץ</label><br>
+        <label for="file1" style="width:50%">Choose a File</label><br>
         <input type="submit" class="action-button shadow animate green" style="margin-left: 25%;width:50%">
         </form>
         </center>

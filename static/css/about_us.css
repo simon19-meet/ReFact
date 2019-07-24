@@ -9,6 +9,7 @@ body{
 
 	background-size: cover;
 	background-position: 50% 50%;
+	background-repeat: no-repeat;
 }
 
 
@@ -78,13 +79,19 @@ h3{
 }
 
 .bg_about{
-	background-color: black;
+	background-color: #434620;
 	padding-left: 50px;
 	padding-right: 50px;
+	font-size:20px;
 }
 .about_us{
 	color:white;
 	text-align: center;
+}
+
+.group_pic{
+	background-image: url("/static/images/group_pic.JPG");
+	background-size: 1000px 500px;
 }
 
 #bg-image{
