@@ -14,7 +14,15 @@ session = DBSession()
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
+@app.route('/material', methods=['GET'])
+def material():
+	if request.method=='GET':
+		return render_template('material.html')
 
+@app.route('/paypal', methods=['GET'])
+def paypal():
+	if request.method=='GET':
+		return render_template('paypal.html')
 
 @app.route('/',methods=['GET','POST'])
 def home():
@@ -22,7 +30,7 @@ def home():
 		add_feedback(request.form['name'],request.form['age'],request.form['content'])
 		return redirect(url_for('home'))
 	if request.method=='GET':
-		return render_template('home.html')
+		return render_template('home.html', lang='he')
 
 @app.route('/about_us',methods=['GET'])
 def about_us():

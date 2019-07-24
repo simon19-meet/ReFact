@@ -7,15 +7,81 @@ body{
 	url("/static/images/camp4.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
+	font-family: akkurat pro, sans serif; 
 }
 
 .box{
 	display: inline-block;
-	margin-top:20%;
+	margin-top:10%;
 	width:100%;
-	height:50%;
+	height:60%;
 }
 
 .white{
-	background:white;
+	background:rgba(255, 255, 255, 0.9);
 }
+
+h1{
+	color: #40461d;
+	margin-top: 5%;
+}
+
+h2{
+	margin-top: 9%;
+	color: white;
+	text-align: center;
+	font-size: 120px;
+    letter-spacing: 3px;
+    line-height: 70%
+
+}
+
+h3{
+	color: white;
+	text-align: center;
+    letter-spacing: 9px;
+
+}
+
+.row{
+	margin-top: 5%;
+	margin-bottom: 6%;	
+}
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 30%;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+  padding: 10px 13px ;
+  border-radius: 30%;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+  padding: 10px 13px;
+  border-radius: 30%;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;	
+}
+
+
+
+
+
+
+
