@@ -42,8 +42,8 @@
                 </div>
             </nav>
     <center><form id="view" method="GET" action="/view_stories">
-    <h1>Stories</h1>
-    <table width="50%">
+<!--     <h1>Stories</h1>
+ -->    <table width="50%">
             {% for i in stories %}
             <tr><td class="story">
                 <center>
@@ -63,7 +63,7 @@
                     <div class="col">Age: {{i.age}}</div>
                     <div class="col"></div>
                     
-                    <div class="col">Story: {{i.content}}</div>
+                    <div class="col">Story: <br>{{i.content}}</div>
                     <div class="col"></div>
                     
                 </div>

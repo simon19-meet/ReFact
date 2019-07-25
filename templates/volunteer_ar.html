@@ -27,16 +27,16 @@
       <div class="v collapse navbar-collapse" id="navbarMenu">
           <ul class="navbar-nav">
               <li style="text-align: right" class="nav-item">
-                  <a href="{{url_for('home')}}" class="nav-link">الرئيسية</a>
+                  <a href="{{url_for('home_ar')}}" class="nav-link">الرئيسية</a>
               </li>
               <li class="nav-item">
-                <a href="{{url_for('about_us')}}" class="nav-link">حولنا</a>
+                <a href="{{url_for('about_us_ar')}}" class="nav-link">حولنا</a>
               </li>
               <li class="nav-item">
-                  <a href="{{url_for('share')}}" class="nav-link">شاركنا قصتك</a>
+                  <a href="{{url_for('share_ar')}}" class="nav-link">شاركنا قصتك</a>
               </li>
               <li class="nav-item">
-                <a href="{{url_for('view')}}" class="nav-link">القصص</a>
+                <a href="{{url_for('view_ar')}}" class="nav-link">القصص</a>
               </li>
           </ul>
       </div>
@@ -46,9 +46,11 @@
 <br><br>
         <h1>سجل كمتوع</h1>
         <form id="vol" action="/volunteer_signup" method="POST">
-        <input type="text" name="name" placeholder="Full Name"><br><br>
-        <input type="text" name="email" placeholder="Email"><br><br>
-        <input type="text" name="age" placeholder="Age"><br><br>
+        <input type="text" name="name" placeholder="الاسم الكامل
+"><br><br>
+        <input type="text" name="email" placeholder="البريد الإلكتروني
+"><br><br>
+        <input type="text" name="age" placeholder="عمر"><br><br>
         <div class="row">
           <div class="col"> </div>
         <div class="col"><input type="radio" name="gender" value="Male" style="color: white;"><h4>ذكر</h4></div>
@@ -57,14 +59,17 @@
         </div>
       <div class="col"> </div>
 </div>
-        <input type="text" name="number" placeholder="Phone Number"><br><br>
-        <input type="text" name="address" placeholder="Address"><br><br>
-        <input type="text" name="work" placeholder="Working Field"><br><br>
+        <input type="text" name="number" placeholder="رقم الهاتف
+"><br><br>
+        <input type="text" name="address" placeholder="عنوان
+"><br><br>
+        <input type="text" name="work" placeholder="مجال العمل
+"><br><br>
         <select name="academic_level">
           <option >مستوى التعليم الأكاديمي</option>
           <option value="elementary">المدرسة الابتدائية</option>
-          <option value="secondary">المدرسة المتوسطة</option>
-          <option value="high_school">المدرسة الاعدادية</option>
+          <option value="secondary">المدرسة الاعدادية</option>
+          <option value="high_school">المدرسة الثانوية</option>
           <option value="academic">التعليم الجامعي</option>
       </select>
         <button type="submit" value="Submit">ارسل</button>
