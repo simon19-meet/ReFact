@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+</head>
+<body>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/static/css/view.css">
+    
+        <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+        <!-- <link rel="stylesheet" type="text/css" href="/static/css/view.css"> -->
+
+
+        <nav class="n navbar navbar-expand-sm navbar-light bg-light">
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="#"><img class="img-responsive2"       
+                 src="/static/images/logo.png" width="60" height="57"></a>
+                    <ul class="navbar-nav">
+                <div class="v collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav">
+                        <li style="text-align: right" class="nav-item">
+                            <a href="{{url_for('home')}}" class="nav-link">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="{{url_for('about_us')}}" class="nav-link">حولنا</a>
+                      </li>
+                      <li class="nav-item">
+                                        <a href="{{url_for('share')}}" class="nav-link">Sشاركنا قصتك</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a href="{{url_for('view')}}" class="nav-link">القصص</a>
+                                  </li>
+                    </ul>
+                </div>
+            </nav>
+    <center><form id="view" method="GET" action="/view_stories">
+    <h1>Stories</h1>
+    <table width="50%">
+            {% for i in stories %}
+            <tr><td class="story">Name: {{i.name}}<br>
+            Age: {{i.age}}<br>
+            Story: {{i.content}}<br>
+            <!-- Before: <img src="/static/images/before{{i.id}}" style="width: 400px;height: 200px;"><br> -->
+            قبل: <img src="/static/images/before{{i.id}}" style="max-width: 50%; max-height: 50%;">
+            بعد: <img src="/static/images/after{{i.id}}" style="max-width: 50%; max-height: 50%;"></td></tr><br><br>
+            <script>setBackground();</script>
+            {% endfor %}
+        </table>
+    </form></center>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<html lang="en">
+    <head>
+
+    <!-- Required meta tags -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1s">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/volunteer.css">
+
+            <title>الفعاليات</title>
+</head>
+<body>
+
+<nav class="n navbar navbar-expand-sm navbar-light bg-light">
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="#"><img class="img-responsive2"       
+       src="/static/images/logo.png" width="60" height="57"></a>
+          <ul class="navbar-nav">
+      <div class="v collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav">
+              <li style="text-align: right" class="nav-item">
+                  <a href="{{url_for('home')}}" class="nav-link">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url_for('about_us')}}" class="nav-link">حولنا</a>
+              </li>
+              <li class="nav-item">
+                  <a href="{{url_for('share')}}" class="nav-link">شاركنا قصتك</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url_for('view')}}" class="nav-link">القصص</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+
+        </ul>
+<br><br>
+        <h1>سجل كمتوع</h1>
+        <form id="vol" action="/volunteer_signup" method="POST">
+        <input type="text" name="name" placeholder="Full Name"><br><br>
+        <input type="text" name="email" placeholder="Email"><br><br>
+        <input type="text" name="age" placeholder="Age"><br><br>
+        <div class="row">
+          <div class="col"> </div>
+        <div class="col"><input type="radio" name="gender" value="Male" style="color: white;"><h4>ذكر</h4></div>
+        <br>
+        <div class="col"><input type="radio" name="gender" value="Female"><h4>أنثى</h4>
+        </div>
+      <div class="col"> </div>
+</div>
+        <input type="text" name="number" placeholder="Phone Number"><br><br>
+        <input type="text" name="address" placeholder="Address"><br><br>
+        <input type="text" name="work" placeholder="Working Field"><br><br>
+        <select name="academic_level">
+          <option >مستوى التعليم الأكاديمي</option>
+          <option value="elementary">المدرسة الابتدائية</option>
+          <option value="secondary">المدرسة المتوسطة</option>
+          <option value="high_school">المدرسة الاعدادية</option>
+          <option value="academic">التعليم الجامعي</option>
+      </select>
+        <button type="submit" value="Submit">ارسل</button>
+    </form>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
