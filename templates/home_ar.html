@@ -28,20 +28,31 @@
       <div class="v collapse navbar-collapse" id="navbarMenu">
           <ul class="navbar-nav">
               <li style="text-align: right" class="nav-item">
-                  <a href="{{url_for('home')}}" class="nav-link">الرئيسية</a>
+                  <a href="{{url_for('home_ar')}}" class="nav-link">الرئيسية</a>
               </li>
               <li class="nav-item">
-                <a href="{{url_for('about_us')}}" class="nav-link">حولنا</a>
+                <a href="{{url_for('about_us_ar')}}" class="nav-link">حولنا</a>
             </li>
             <li class="nav-item">
-              <a href="{{url_for('share')}}" class="nav-link">شاركنا قصتك</a>
+              <a href="{{url_for('share_ar')}}" class="nav-link">شاركنا قصتك</a>
               </li>
               <li class="nav-item">
-              <a href="{{url_for('view')}}" class="nav-link">القصص</a>
+              <a href="{{url_for('view_ar')}}" class="nav-link">القصص</a>
               </li>
-              <li class="nav-item">
-              <a href="{{url_for('home_he')}}" class="nav-link">Hebrew</a>
           </ul>
+          <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="margin-left: 1000%; color: #21252987;font-size: 12px;"><img src="/static/images/globe.png" style="max-width: 30px;">
+          لغة
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="margin-left: 910%;" >
+          <a class="dropdown-item" href="{{url_for('home')}}" style="font-size: 12px;">English
+</a>
+          <a class="dropdown-item" href="{{url_for('home_he')}}" style="font-size: 12px;">עברית
+</a>
+          <a class="dropdown-item" href="{{url_for('home_ar')}}" style="font-size: 12px;">عربى
+</a>
+        </div>
+      </div>
       </div>
   </nav>
 
@@ -57,11 +68,11 @@
     <div class="row" style="padding-top: 5%;">
       <div class="col-sm"></div>
       <div class="col-sm col1">
-        <center><a class="btn btn-primary center-block" href="{{url_for('volunteering')}}" role="button">تطوع</a></center>
+        <center><a class="btn btn-primary center-block" href="{{url_for('volunteering_ar')}}" role="button">تطوع</a></center>
       </div>
       <div class="col-sm"></div>
       <div class="col-sm col1">
-       <center> <a class="btn btn-primary center-block" style="text-decoration:none" href="{{url_for('donations')}}" role="button">تبرع</a>
+       <center> <a class="btn btn-primary center-block" style="text-decoration:none" href="{{url_for('donations_ar')}}" role="button">تبرع</a>
       </div>
       <div class="col-sm"></div>
     </div>

@@ -30,25 +30,25 @@
             <div class="v collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav">
                     <li style="text-align: right" class="nav-item">
-                        <a href="{{url_for('home')}}" class="nav-link">الرئيسية</a>
+                        <a href="{{url_for('home_ar')}}" class="nav-link">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{{url_for('about_us')}}" class="nav-link">حولنا</a>
+                      <a href="{{url_for('about_us_ar')}}" class="nav-link">حولنا</a>
                   </li>
                   <li class="nav-item">
-                                    <a href="{{url_for('share')}}" class="nav-link">شاركنا قصتك</a>
+                                    <a href="{{url_for('share_ar')}}" class="nav-link">شاركنا قصتك</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a href="{{url_for('view')}}" class="nav-link">القصص</a>
+                                  <a href="{{url_for('view_ar')}}" class="nav-link">القصص</a>
                               </li>
                 </ul>
             </div>
         </nav>
            <center><h1>شاركا تجربتك</h1>
         <form id="share" action="/share" method="POST" enctype="multipart/form-data" >
-        <input type="text" name="name" placeholder="Name" class="info"><br>
-        <input type="text" name="age" placeholder="Age" class="info"><br>
-        <input type="text"  name="content" placeholder="Your Story" class="info">
+        <input type="text" name="name" placeholder="الاسم" class="info"><br>
+        <input type="text" name="age" placeholder="العمر" class="info"><br>
+        <input type="text"  name="content" placeholder="شارك قصتك" class="info">
         <h2>صورة قبل:</h2>
         <input type="file" name="before" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
         <label for="file" style="width:20%; background-color: #565d2a; border-radius: 36PX;">اختر ملفا</label><br>

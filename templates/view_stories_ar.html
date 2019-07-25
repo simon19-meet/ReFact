@@ -27,30 +27,47 @@
                 <div class="v collapse navbar-collapse" id="navbarMenu">
                     <ul class="navbar-nav">
                         <li style="text-align: right" class="nav-item">
-                            <a href="{{url_for('home')}}" class="nav-link">الرئيسية</a>
+                            <a href="{{url_for('home_ar')}}" class="nav-link">الرئيسية</a>
                         </li>
                         <li class="nav-item">
-                          <a href="{{url_for('about_us')}}" class="nav-link">حولنا</a>
+                          <a href="{{url_for('about_us_ar')}}" class="nav-link">حولنا</a>
                       </li>
                       <li class="nav-item">
-                                        <a href="{{url_for('share')}}" class="nav-link">Sشاركنا قصتك</a>
+                                        <a href="{{url_for('share_ar')}}" class="nav-link">Sشاركنا قصتك</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a href="{{url_for('view')}}" class="nav-link">القصص</a>
+                                      <a href="{{url_for('view_ar')}}" class="nav-link">القصص</a>
                                   </li>
                     </ul>
                 </div>
             </nav>
     <center><form id="view" method="GET" action="/view_stories">
-    <h1>Stories</h1>
-    <table width="50%">
+<!--     <h1>Stories</h1>
+ -->    <table width="50%">
             {% for i in stories %}
-            <tr><td class="story">Name: {{i.name}}<br>
-            Age: {{i.age}}<br>
-            Story: {{i.content}}<br>
+            <tr><td class="story">
+                <center>
             <!-- Before: <img src="/static/images/before{{i.id}}" style="width: 400px;height: 200px;"><br> -->
-            قبل: <img src="/static/images/before{{i.id}}" style="max-width: 50%; max-height: 50%;">
-            بعد: <img src="/static/images/after{{i.id}}" style="max-width: 50%; max-height: 50%;"></td></tr><br><br>
+            <div class="row">
+                    <div class="col"></div>
+                <div class="col">:قبل<br> <img src="/static/images/before{{i.id}}" style="width: 375px; height: 250px;"></div>
+                <div class="col">:بعد<br> <img src="/static/images/after{{i.id}}" style="width: 375px; height: 250px;"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                
+                    <div class="col">:اسم {{i.name}}</div>
+                    <div class="col"></div>
+                    
+                    <div class="col">:عمر {{i.age}}</div>
+                    <div class="col"></div>
+                    
+                    <div class="col">:قصة<br> {{i.content}}</div>
+                    <div class="col"></div>
+                    
+                </div>
+            </center></td></tr><br><br>
             <script>setBackground();</script>
             {% endfor %}
         </table>
