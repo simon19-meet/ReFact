@@ -1,0 +1,70 @@
+<html lang="en">
+    <head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="/static/css/share.css">
+<link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+<meta name="author" content="www.twitter.com/cheeriottis">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/static/css/buttons.css">
+  <link rel="stylesheet" href="/static/css/files.css">
+  <link rel="stylesheet" href="/static/css/share.css">
+
+
+
+    </head>
+    <body>
+
+        <nav class="n navbar navbar-expand-sm navbar-light bg-light">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="#"><img class="img-responsive2"       
+             src="/static/images/logo.png" width="60" height="57"></a>
+                <ul class="navbar-nav">
+            <div class="v collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li style="text-align: right" class="nav-item">
+                        <a href="{{url_for('home_ar')}}" class="nav-link">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{url_for('about_us_ar')}}" class="nav-link">حولنا</a>
+                  </li>
+                  <li class="nav-item">
+                                    <a href="{{url_for('share_ar')}}" class="nav-link">شاركنا قصتك</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a href="{{url_for('view_ar')}}" class="nav-link">القصص</a>
+                              </li>
+                </ul>
+            </div>
+        </nav>
+           <center><h1>شاركا تجربتك</h1>
+        <form id="share" action="/share" method="POST" enctype="multipart/form-data" >
+        <input type="text" name="name" placeholder="الاسم" class="info"><br>
+        <input type="text" name="age" placeholder="العمر" class="info"><br>
+        <input type="text"  name="content" placeholder="شارك قصتك" class="info">
+        <h2>صورة قبل:</h2>
+        <input type="file" name="before" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+        <label for="file" style="width:20%; background-color: #565d2a; border-radius: 36PX;">اختر ملفا</label><br>
+        <h2>صورة بعد: </h2>
+        <input type="file" name="after" id="file1" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+        <label for="file1" style="width:20%; background-color: #565d2a; border-radius: 36PX;">اختر ملفا</label><br><br>
+        <input type="submit" class="action-button shadow animate green" style="margin-left: 25%;width:50%">
+        </form>
+        </center>
+        
+   
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/static/JS/files.js"></script> -->
+</body>
+</html>

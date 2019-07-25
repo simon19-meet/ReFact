@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<!-- <body>
+<h2>What would you like to donate?</h2>
+<form action="mailto:ReFact.meet@gmail.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+Comment:<br>
+<input type="text" name="comment" size="50"><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form> -->
+
+<!-- <form action="mailto:ReFact.meet@gmail.com" method="post" enctype="text/plain">
+ -->
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 70%;
+  background-color: #6B7433;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+input[type=reset] {
+  width: 28%;
+  background-color: #6B7433;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #6b7433bd;
+}
+
+input[type=reset]:hover {
+  background-color: #6b7433bd;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+#donation{
+	margin-bottom: 3px;
+}
+
+#other{
+	width: 100%;
+	padding: 4px 10px;
+	margin-top: 0px;
+}
+
+h2{
+	text-align: center;
+	font-size: 35px;
+	color: #40461d;
+}
+
+</style>
+
+<body>
+<form action="mailto:ReFact.meet@gmail.com" method="post" enctype="text/plain">
+	
+
+
+<div>
+  <form action="/action_page.php">
+  	<h2>تبرع بالاغراض</h2>
+    <label for="fname">الاسم الأول</label>
+    <input type="text" id="fname" name="firstname" placeholder="الاسم الأول">
+
+    <label for="lname">اسم العائلة</label>
+    <input type="text" id="lname" name="lastname" placeholder="اسم العائلة">
+
+    <label for="lname">تعليق</label>
+    <input type="text" id="lname" name="Comment" placeholder="اي تعليق.." >
+
+
+    <label for="donation">بماذا ترغب بالتبرع؟</label>
+    <select id="donation" name="donation">
+
+      <option value="choose one">اختر واحدا</option> 
+      <option value="Clothing">ملابس</option>    
+      <option value="School Supplies">معدات مدرسية</option>	
+      <option value="Toy & Game Donation">العاب</option>
+      <option value="Food & Groceries">طعام</option>
+      <option value="Cell Phones">هواتف خلوية</option>
+      <option value="Computers & Office Equipment">معادت كمبيوتر ومعدات مكتبية</option>
+      <option value="Furniture">آثاث</option>
+      <option value="Household Goods">معدات منزلية</option>
+      <option value="Medical Equipment & Supplies">معدات طبية</option>
+
+       <label for="lname">آخر</label>
+       <input id="other" type="text" id="lname" name="Other" placeholder="آخر.." ><br>
+      
+
+    </select>
+  
+    <input type="submit" value="ارسل">  <input type="reset" value="أعد الصفحة">
+  </form>
+</div>
+
+</body>
+</html>

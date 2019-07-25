@@ -1,4 +1,4 @@
-<html lang="he">
+<html lang="en">
 <head>
 </head>
 <body>
@@ -27,23 +27,21 @@
                 <div class="v collapse navbar-collapse" id="navbarMenu">
                     <ul class="navbar-nav">
                         <li style="text-align: right" class="nav-item">
-                            <a href="{{url_for('home_he')}}" class="nav-link">בית</a>
+                            <a href="{{url_for('home_ar')}}" class="nav-link">الرئيسية</a>
                         </li>
                         <li class="nav-item">
-                          <a href="{{url_for('about_us_he')}}" class="nav-link">עלינו</a>
+                          <a href="{{url_for('about_us_ar')}}" class="nav-link">حولنا</a>
                       </li>
                       <li class="nav-item">
-                                        <a href="{{url_for('share_he')}}" class="nav-link">שתף סיפור</a>
+                                        <a href="{{url_for('share_ar')}}" class="nav-link">Sشاركنا قصتك</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a href="{{url_for('view_he')}}" class="nav-link">צפה בכל הסיפורים</a>
+                                      <a href="{{url_for('view_ar')}}" class="nav-link">القصص</a>
                                   </li>
                     </ul>
-
                 </div>
             </nav>
-
- <center><form id="view" method="GET" action="/view_stories">
+    <center><form id="view" method="GET" action="/view_stories">
 <!--     <h1>Stories</h1>
  -->    <table width="50%">
             {% for i in stories %}
@@ -52,20 +50,20 @@
             <!-- Before: <img src="/static/images/before{{i.id}}" style="width: 400px;height: 200px;"><br> -->
             <div class="row">
                     <div class="col"></div>
-                <div class="col">:לפני<br> <img src="/static/images/before{{i.id}}" style="width: 375px; height: 250px;"></div>
-                <div class="col">:אחרי<br> <img src="/static/images/after{{i.id}}" style="width: 375px; height: 250px;"></div>
+                <div class="col">:قبل<br> <img src="/static/images/before{{i.id}}" style="width: 375px; height: 250px;"></div>
+                <div class="col">:بعد<br> <img src="/static/images/after{{i.id}}" style="width: 375px; height: 250px;"></div>
                 <div class="col"></div>
             </div>
             <div class="row">
                 <div class="col"></div>
                 
-                    <div class="col">:שם {{i.name}}</div>
+                    <div class="col">:اسم {{i.name}}</div>
                     <div class="col"></div>
                     
-                    <div class="col">גיל: {{i.age}}</div>
+                    <div class="col">:عمر {{i.age}}</div>
                     <div class="col"></div>
                     
-                    <div class="col">:סיפור<br> {{i.content}}</div>
+                    <div class="col">:قصة<br> {{i.content}}</div>
                     <div class="col"></div>
                     
                 </div>

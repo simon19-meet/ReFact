@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="he">
+<html>
   <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,34 +22,35 @@
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
           <span class="navbar-toggler-icon"></span>
       </button>
-      <a href="{{url_for('home')}}"><img class="img-responsive2"       
+      <a href="#"><img class="img-responsive2"       
        src="/static/images/logo.png" width="60" height="57"></a>
           <ul class="navbar-nav">
       <div class="v collapse navbar-collapse" id="navbarMenu">
           <ul class="navbar-nav">
               <li style="text-align: right" class="nav-item">
-                  <a href="{{url_for('home_he')}}" class="nav-link">בית</a>
+                  <a href="{{url_for('home_ar')}}" class="nav-link">الرئيسية</a>
               </li>
               <li class="nav-item">
-                <a href="{{url_for('about_us_he')}}" class="nav-link">עלינו</a>
+                <a href="{{url_for('about_us_ar')}}" class="nav-link">حولنا</a>
             </li>
             <li class="nav-item">
-                              <a href="{{url_for('share_he')}}" class="nav-link">שתף סיפור</a>
-                          </li>
-                          <li class="nav-item">
-                            <a href="{{url_for('view_he')}}" class="nav-link">צפה בכל הסיפורים</a>
-                        </li>
-
-            </li>
+              <a href="{{url_for('share_ar')}}" class="nav-link">شاركنا قصتك</a>
+              </li>
+              <li class="nav-item">
+              <a href="{{url_for('view_ar')}}" class="nav-link">القصص</a>
+              </li>
           </ul>
-                  <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="margin-left: 840%; color: #21252987;font-size: 12px;"><img src="/static/images/globe.png" style="max-width: 30px;">
-          שפה
+          <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="margin-left: 1000%; color: #21252987;font-size: 12px;"><img src="/static/images/globe.png" style="max-width: 30px;">
+          لغة
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="margin-left: 790%;" >
-          <a class="dropdown-item" href="{{url_for('home')}}" style="font-size: 12px;">English</a>
-          <a class="dropdown-item" href="{{url_for('home_he')}}" style="font-size: 12px;">עברית</a>
-          <a class="dropdown-item" href="{{url_for('home_ar')}}" style="font-size: 12px;">عربى</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="margin-left: 910%;" >
+          <a class="dropdown-item" href="{{url_for('home')}}" style="font-size: 12px;">English
+</a>
+          <a class="dropdown-item" href="{{url_for('home_he')}}" style="font-size: 12px;">עברית
+</a>
+          <a class="dropdown-item" href="{{url_for('home_ar')}}" style="font-size: 12px;">عربى
+</a>
         </div>
       </div>
       </div>
@@ -60,18 +61,18 @@
     <div class="row">
       <div class="col-2"></div>
       <div class="col-8">
-      <center><h2>הפיצו שמחה השרו תקווה</h2></center>
+      <center><h2>انشر الفرحة انثر الأمل</h2></center>
       </div>
       <div class="col-4"></div>
     </div>
     <div class="row" style="padding-top: 5%;">
       <div class="col-sm"></div>
       <div class="col-sm col1">
-        <center><a class="btn btn-primary center-block" href="{{url_for('volunteering_he')}}" role="button">התנדבו</a></center>
+        <center><a class="btn btn-primary center-block" href="{{url_for('volunteering_ar')}}" role="button">تطوع</a></center>
       </div>
       <div class="col-sm"></div>
       <div class="col-sm col1">
-       <center> <a class="btn btn-primary center-block" style="text-decoration:none" href="{{url_for('donations_he')}}" role="button">תרמו</a>
+       <center> <a class="btn btn-primary center-block" style="text-decoration:none" href="{{url_for('donations_ar')}}" role="button">تبرع</a>
       </div>
       <div class="col-sm"></div>
     </div>
@@ -79,7 +80,7 @@
   </div>
   <div>
 <br><br><br><br><br>
-      <center><h1>צרו קשר</h1>
+      <center><h1>تواصل معنا</h1>
 
         <a href="https://www.facebook.com/ReFact.meet/?modal=admin_todo_tour" class="fa fa-facebook"></a>
         <a href="https://www.instagram.com/refact.y3/" class="fa fa-instagram"></a>
@@ -95,16 +96,4 @@
 
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
 
