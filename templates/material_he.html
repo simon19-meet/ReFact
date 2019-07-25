@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<!-- <body>
+<h2>What would you like to donate?</h2>
+<form action="mailto:ReFact.meet@gmail.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+Comment:<br>
+<input type="text" name="comment" size="50"><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form> -->
+
+<!-- <form action="mailto:ReFact.meet@gmail.com" method="post" enctype="text/plain">
+ -->
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 70%;
+  background-color: #6B7433;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+input[type=reset] {
+  width: 28%;
+  background-color: #6B7433;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #6b7433bd;
+}
+
+input[type=reset]:hover {
+  background-color: #6b7433bd;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+#donation{
+	margin-bottom: 3px;
+}
+
+#other{
+	width: 100%;
+	padding: 4px 10px;
+	margin-top: 0px;
+}
+
+h2{
+	text-align: center;
+	font-size: 35px;
+	color: #40461d;
+}
+
+</style>
+
+<body>
+<form action="mailto:ReFact.meet@gmail.com" method="post" enctype="text/plain">
+	
+
+
+<div>
+  <form action="/action_page.php">
+  	<h2>תרמו חפצים</h2>
+    <label for="fname">שם פרטי</label>
+    <input type="text" id="fname" name="firstname" placeholder="שם פרטי..">
+
+    <label for="lname">שם משפחה</label>
+    <input type="text" id="lname" name="lastname" placeholder="שם משפחה..">
+
+    <label for="lname">הערות</label>
+    <input type="text" id="lname" name="Comment" placeholder="ההערות שלך.." >
+
+
+    <label for="donation">?מה תרצו לתרום</label>
+    <select id="donation" name="donation">
+
+      <option value="choose one">בחרו אחד</option> 
+      <option value="Clothing">ביגוד</option>    
+      <option value="School Supplies">ציות בית ספר</option>	
+      <option value="Toy & Game Donation">צעצועים ומשחקים</option>
+      <option value="Food & Groceries">מזון ומצרכים</option>
+      <option value="Cell Phones">טלפון סלולארי</option>
+      <option value="Computers & Office Equipment">מחשבים וציוד משרדי</option>
+      <option value="Furniture">רהיטים</option>
+      <option value="Household Goods">מוצרים לבית</option>
+      <option value="Medical Equipment & Supplies">ציוד רפואי</option>
+
+       <label for="lname">אחר</label>
+       <input id="other" type="text" id="lname" name="Other" placeholder="אחר .." ><br>
+      
+
+    </select>
+  
+    <input type="submit" value="שלח">  <input type="reset" value="איפוס">
+  </form>
+</div>
+
+</body>
+</html>

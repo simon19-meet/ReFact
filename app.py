@@ -19,10 +19,20 @@ def material():
 	if request.method=='GET':
 		return render_template('material.html')
 
+@app.route('/material_he', methods=['GET'])
+def material_he():
+	if request.method=='GET':
+		return render_template('material_he.html')
+
 @app.route('/paypal', methods=['GET'])
 def paypal():
 	if request.method=='GET':
 		return render_template('paypal.html')
+
+@app.route('/paypal_he', methods=['GET'])
+def paypal_he():
+	if request.method=='GET':
+		return render_template('paypal_he.html')
 
 @app.route('/',methods=['GET','POST'])
 def home():
