@@ -1,9 +1,9 @@
-body{
+/*body{
 	background-image: url("/static/images/camp6.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin: 0;
-}
+}*/
 
 table {
     border-collapse: separate;
@@ -14,15 +14,39 @@ table {
     font-style: normal;
     color: -internal-quirk-inherit;
     text-align: start;
-    border-spacing: 2px;
+    border-spacing: 15px;
     font-variant: normal;
 }
 
 
 .story{
     background-attachment: fixed;
-	background-image:url("/static/images/green-wallpaper-10.jpg");
+	/*background-image:url("/static/images/green-wallpaper-10.jpg"); */
+    background-color: rgba(255, 255, 255, 0.6);
 	border-radius: 40px;
     padding: 10px 10px 10px 10px;
     color: white;
+    line-height: 120%;  
 }
+
+body{
+    /*background-image: url("/static/images/camp8.jpg");*/
+    background-color: #6B7433;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    line-height: 30%
+}
+
+h1{
+    font-size: 55px !important;
+    margin-top: 10px;
+
+}
+/*
+.story{
+    background:rgba(255, 255, 255, 0.6)
+
+    background-attachment: fixed;
+    border-radius: 40px;
+    padding: 10px 10px 10px 10px;
+}*/
