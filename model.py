@@ -48,7 +48,17 @@ class Story(Base):
 	after=Column(LargeBinary)
 
 class Subscription(Base):
-    __tablename__="emails"
+    __tablename__="Emails"
     id=Column(Integer, primary_key=True)
     name= Column(String)
     email=Column(String)
+
+class Program(Base):
+	__tablename__="Info"
+	id=Column(integer, primary_key=True)
+	number=Column(Integer)
+	place=Column(String)
+	date=Column(String)
+	numOfParticipants=Column(Integer)
+	aim=Column(String)
+	description=Column(String)

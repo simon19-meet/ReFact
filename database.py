@@ -72,3 +72,8 @@ def add_sub():
 	sub=Subscription(name="emkay",email="matveycraft@gmail.com")
 	session.add(sub)
 	session.commit()
+
+def add_program(number,place,date,numOfParticipants,aim,description):
+	program=Program(number=number,place=place,date=date,numberOfParticipants=numOfParticipants,aim=aim,description=description)
+	session.add(program)
+	session.commit()
