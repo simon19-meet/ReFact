@@ -1,61 +1,74 @@
 <!doctype html>
 <html lang="en">
-  <head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/static/css/h.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/static/css/h.css">
 
-    <title>Refact</title>
-  </head>
-    <body>
-    <div id="bg-image"></div>
- 
-    <nav class="n navbar navbar-expand-sm navbar-light bg-light">
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <a href="#"><img class="img-responsive2"       
-       src="/static/images/logo.png" width="60" height="57"></a>
-          <ul class="navbar-nav">
+  <title>Refact</title>
+</head>
+
+<body>
+  <div id="bg-image"></div>
+
+  <nav class="n navbar navbar-expand-sm navbar-light bg-light">
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="#"><img class="img-responsive2" src="/static/images/logo.png" width="60" height="57"></a>
+    <ul class="navbar-nav">
       <div class="v collapse navbar-collapse" id="navbarMenu">
-          <ul class="navbar-nav">
-              <li style="text-align: right" class="nav-item">
-                  <a href="{{url_for('home')}}" class="nav-link">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="{{url_for('about_us')}}" class="nav-link">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a href="{{url_for('share')}}" class="nav-link">Share Your Story</a>
-              </li>
-              <li class="nav-item">
-              <a href="{{url_for('view')}}" class="nav-link">View All Stories</a>
-              </li>
-            <!--   <li >
+        <ul class="navbar-nav">
+          <li style="text-align: right" class="nav-item">
+            <a href="{{url_for('home')}}" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url_for('about_us')}}" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url_for('share')}}" class="nav-link">Share Your Story</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url_for('view')}}" class="nav-link">View All Stories</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url_for('insert')}}" class="nav-link" onclick="do_check()">Add Program</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url_for('show')}}" class="nav-link">View All Programs</a>
+          </li>
+
+          <!--   <li >
               <a href="{{url_for('home_he')}}" class="nav-link" style="margin-left: 90%;">Hebrew</a></li> -->
-          </ul></ul>
-          <!-- <li> -->
-        <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="margin-left: 350%; color: #21252987;font-size: 12px;"><img src="/static/images/globe.png" style="max-width: 30px;">
-          Language
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="margin-left: 340%;" >
-          <a class="dropdown-item" href="{{url_for('home')}}" style="font-size: 12px;">English</a>
-          <a class="dropdown-item" href="{{url_for('home_he')}}" style="font-size: 12px;">עברית</a>
-          <a class="dropdown-item" href="{{url_for('home_ar')}}" style="font-size: 12px;">عربى</a>
-        </div>
+        </ul>
+    </ul>
+    <!-- <li> -->
+    <div class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false" style="margin-left: 350%; color: #21252987;font-size: 12px;"><img
+          src="/static/images/globe.png" style="max-width: 30px;">
+        Language
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="margin-left: 340%;">
+        <a class="dropdown-item" href="{{url_for('home')}}" style="font-size: 12px;">English</a>
+        <a class="dropdown-item" href="{{url_for('home_he')}}" style="font-size: 12px;">עברית</a>
+        <a class="dropdown-item" href="{{url_for('home_ar')}}" style="font-size: 12px;">عربى</a>
       </div>
-<!--         <a href="{{url_for('home_he')}}" id="heb" class="nav-link" style="margin-left: 47%; color: #21252987;font-size: 10px;">Hebrew</a> -->
-          
-      </div>
+    </div>
+    <!--         <a href="{{url_for('home_he')}}" id="heb" class="nav-link" style="margin-left: 47%; color: #21252987;font-size: 10px;">Hebrew</a> -->
+
+    </div>
   </nav>
 
   <div class="container-fluid">
@@ -63,39 +76,54 @@
     <div class="row">
       <div class="col-2"></div>
       <div class="col-8">
-      <center><h2>spread joy Inspire Hope</h2></center>
+        <center>
+          <h2>spread joy Inspire Hope</h2>
+        </center>
       </div>
       <div class="col-4"></div>
     </div>
     <div class="row" style="padding-top: 5%;">
       <div class="col-sm"></div>
       <div class="col-sm col1">
-        <center><a class="btn btn-primary center-block" href="{{url_for('volunteering')}}" role="button">Volunteer</a></center>
+        <center><a class="btn btn-primary center-block" href="{{url_for('volunteering')}}" role="button">Volunteer</a>
+        </center>
       </div>
       <div class="col-sm"></div>
       <div class="col-sm col1">
-       <center> <a class="btn btn-primary center-block" style="text-decoration:none" href="{{url_for('donations')}}" role="button">Donate</a>
+        <center> <a class="btn btn-primary center-block" style="text-decoration:none" href="{{url_for('donations')}}"
+            role="button">Donate</a>
       </div>
       <div class="col-sm"></div>
     </div>
-    
+
   </div>
   <div>
-<br><br><br><br><br>
-      <center><h1>contact Us</h1>
+    <br><br><br><br><br>
+    <center>
+      <h1>contact Us</h1>
 
-        <a href="https://www.facebook.com/ReFact.meet/?modal=admin_todo_tour" class="fa fa-facebook"></a>
-        <a href="https://www.instagram.com/refact.y3/" class="fa fa-instagram"></a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Refact.meet@gmail.com&su=SUBJECT&body=BODY&bcc=Refact.meet@gmail.com" class="fa fa-google"></a>
-        </center>
+      <a href="https://www.facebook.com/ReFact.meet/?modal=admin_todo_tour" class="fa fa-facebook"></a>
+      <a href="https://www.instagram.com/refact.y3/" class="fa fa-instagram"></a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Refact.meet@gmail.com&su=SUBJECT&body=BODY&bcc=Refact.meet@gmail.com"
+        class="fa fa-google"></a>
+    </center>
   </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  </body>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="/static/JS/popup.js"></script>
+</body>
+
 </html>
-

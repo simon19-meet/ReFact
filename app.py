@@ -4,6 +4,9 @@ from flask import session as login_session
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+import json
+
+
 
 
 engine = create_engine('sqlite:///database.db?check_same_thread=False')
@@ -263,6 +266,9 @@ def insert():
 		add_program(number,place,date,numppl,aim,info)
 		return redirect(url_for('show'))
 	return render_template('insert.html')
+	#return redirect(url_for('home'))
+	
+	
 
 @app.route('/info',methods=['GET','POST'])
 def show():
