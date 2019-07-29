@@ -251,6 +251,25 @@ def view_ar():
 		stories=display_stories()
 		return render_template('view_stories_ar.html',stories=stories)
 
+@app.route('/insert',methods=['POST','GET'])
+def insert():
+	if request.method=='POST':
+		number=request.form['number']
+		place=request.form['place']
+		date=request.form['date']
+		numppl=request.form['numppl']
+		aim=request.form['aim']
+		info=request.form['info']
+		add_program(number,place,date,numppl,aim,info)
+		return redirect(url_for('show'))
+	return render_template('insert.html')
+
+@app.route('/info',methods=['GET','POST'])
+def show():
+	if request.method == 'GET':
+		programs=display_programs()
+		return render_template('info.html',programs=programs)
+
 if __name__ == '__main__':
 	app.run(debug=True)
 

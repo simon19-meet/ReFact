@@ -74,6 +74,10 @@ def add_sub():
 	session.commit()
 
 def add_program(number,place,date,numOfParticipants,aim,description):
-	program=Program(number=number,place=place,date=date,numberOfParticipants=numOfParticipants,aim=aim,description=description)
+	program=Program(number=number,place=place,date=date,numOfParticipants=numOfParticipants,aim=aim,description=description)
 	session.add(program)
 	session.commit()
+
+def  display_programs():
+	programs=session.query(Program).all()
+	return programs

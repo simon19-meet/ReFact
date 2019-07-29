@@ -55,7 +55,7 @@ class Subscription(Base):
 
 class Program(Base):
 	__tablename__="Info"
-	id=Column(integer, primary_key=True)
+	id=Column(Integer, primary_key=True)
 	number=Column(Integer)
 	place=Column(String)
 	date=Column(String)
