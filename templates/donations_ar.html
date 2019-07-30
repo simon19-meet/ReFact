@@ -1,7 +1,8 @@
 <!-- <!DOCTYPE html> -->
 <html>
-    <head>
-        <!-- Required meta tags -->
+
+<head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -9,93 +10,107 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
     <link rel="stylesheet" type="text/css" href="/static/css/donate.css">
 
 
 
-    </head>
-    <body>
-        <nav class="n navbar navbar-expand-sm navbar-light bg-light">
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a href="#"><img class="img-responsive2"       
-             src="/static/images/logo.png" width="60" height="57"></a>
-                <ul class="navbar-nav">
+</head>
+
+<body>
+    <nav class="n navbar navbar-expand-sm navbar-light bg-light">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="#"><img class="img-responsive2" src="/static/images/logo.png" width="60" height="57"></a>
+        <ul class="navbar-nav">
             <div class="v collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav">
                     <li style="text-align: right" class="nav-item">
                         <a href="{{url_for('home_ar')}}" class="nav-link">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{{url_for('about_us_ar')}}" class="nav-link">حولنا</a>
-                  </li>
-                  <li class="nav-item">
-                                    <a href="{{url_for('share_ar')}}" class="nav-link">شاركنا قصتك</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a href="{{url_for('view_ar')}}" class="nav-link">القصص</a>
-                              </li>
+                        <a href="{{url_for('about_us_ar')}}" class="nav-link">حولنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('share_ar')}}" class="nav-link">شاركنا قصتك</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('view_ar')}}" class="nav-link">القصص</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" onclick="do_check()" prevent>أضف مشروعًا</span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('show')}}" class="nav-link">المشاريع</a>
+                    </li>
                 </ul>
             </div>
-        </nav>
-<h2> تبرع</h2><br>
-<h3>ساهم في مساعدة اللاجئين</h3>
+    </nav>
+    <h2> تبرع</h2><br>
+    <h3>ساهم في مساعدة اللاجئين</h3>
 
     <div class="donation">
         <div id="donate" class="box white">
-                <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
 
             <div class="row">
-              <div class="col-sm"></div>
-              <div class="col-sm col1">
-                <!-- <center><a class="btn btn-primary center-block" onclick="window.open('https://www.quackit.com/javascript/examples/sample_popup.cfm','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" role="button">Donate Money</a></center> -->
-                <center><a id="leen" class="btn btn-primary center-block" href="{{url_for('paypal_ar')}}" onclick="centeredPopup(this.href,'myWindow','700','300','yes');return false" role="button">تبرع بالمال</a></center>
-              </div>
-              <div class="col-sm"></div>
-              <div class="col-sm col1">
-               <center> <a class="btn btn-primary center-block" onclick="centeredPopup(this.href,'myWindow','700','300','yes');return false" href="{{url_for('material_ar')}}" role="button">تبرع بالاغراض</a></center>
-              </div>
-              <div class="col-sm"></div>
+                <div class="col-sm"></div>
+                <div class="col-sm col1">
+                    <!-- <center><a class="btn btn-primary center-block" onclick="window.open('https://www.quackit.com/javascript/examples/sample_popup.cfm','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" role="button">Donate Money</a></center> -->
+                    <center><a id="leen" class="btn btn-primary center-block" href="{{url_for('paypal_ar')}}"
+                            onclick="centeredPopup(this.href,'myWindow','700','300','yes');return false"
+                            role="button">تبرع بالمال</a></center>
+                </div>
+                <div class="col-sm"></div>
+                <div class="col-sm col1">
+                    <center> <a class="btn btn-primary center-block"
+                            onclick="centeredPopup(this.href,'myWindow','700','300','yes');return false"
+                            href="{{url_for('material_ar')}}" role="button">تبرع بالاغراض</a></center>
+                </div>
+                <div class="col-sm"></div>
             </div>
-            <hr/>
+            <hr />
 
-                  <center><h1>تواصل معنا</h1>
+            <center>
+                <h1>تواصل معنا</h1>
 
-                    <a href="https://www.facebook.com/ReFact.meet/?modal=admin_todo_tour" class="fa fa-facebook"></a>
-                    <a href="https://www.instagram.com/refact.y3/" class="fa fa-instagram"></a>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Refact.meet@gmail.com&su=SUBJECT&body=BODY&bcc=Refact.meet@gmail.com" class="fa fa-google"></a>
-                    </center>
-              </div>
+                <a href="https://www.facebook.com/ReFact.meet/?modal=admin_todo_tour" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/refact.y3/" class="fa fa-instagram"></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Refact.meet@gmail.com&su=SUBJECT&body=BODY&bcc=Refact.meet@gmail.com"
+                    class="fa fa-google"></a>
+            </center>
+        </div>
 
 
     </div>
-  </div>
-  <div>
+    </div>
+    <div>
 
 
 
-<script type="text/javascript">
-        function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
-    }
+        <script type="text/javascript">
+            function basicPopup(url) {
+                popupWindow = window.open(url, 'popUpWindow', 'height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+            }
 
-    var popupWindow = null;
-function centeredPopup(url,winName,w,h,scroll){
-LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
-TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
-settings =
-'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
-popupWindow = window.open(url,winName,settings)
-}
-</script>
+            var popupWindow = null;
+            function centeredPopup(url, winName, w, h, scroll) {
+                LeftPosition = (screen.width) ? (screen.width - w) / 2 : 0;
+                TopPosition = (screen.height) ? (screen.height - h) / 2 : 0;
+                settings =
+                    'height=' + h + ',width=' + w + ',top=' + TopPosition + ',left=' + LeftPosition + ',scrollbars=' + scroll + ',resizable'
+                popupWindow = window.open(url, winName, settings)
+            }
+        </script>
 
-       </div>
+    </div>
     </div>
     <script src="/static/JS/popup.js"></script>
-    </body>
+</body>
+
 </html>
