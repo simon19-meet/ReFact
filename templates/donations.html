@@ -39,8 +39,8 @@
                             <a href="{{url_for('view')}}" class="nav-link">View All Stories</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{url_for('insert')}}" class="nav-link">Add Program</a>
-                                </li>
+                              <span class="nav-link" onclick="do_check()" prevent>Add Program</span>
+                            </li>
                                 <li class="nav-item">
                                     <a href="{{url_for('show')}}" class="nav-link">View All Programs</a>
                                     </li>
@@ -118,6 +118,6 @@ popupWindow = window.open(url,winName,settings)
 
        </div>
     </div>
-
+    <script src="/static/JS/popup.js"></script>
     </body>
 </html>

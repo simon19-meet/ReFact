@@ -265,8 +265,9 @@ def insert():
 		info=request.form['info']
 		add_program(number,place,date,numppl,aim,info)
 		return redirect(url_for('show'))
-	return render_template('insert.html')
-	#return redirect(url_for('home'))
+	if 'code' in request.args and request.args['code'] == '0542968295':
+		return render_template('insert.html')
+	return redirect(url_for('home'))
 	
 	
 
