@@ -1,102 +1,114 @@
 <html lang="en">
+
 <head>
 </head>
+
 <body>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-        <link rel="stylesheet" type="text/css" href="/static/css/view.css">
-        <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
-        <!-- <link rel="stylesheet" type="text/css" href="/static/css/view.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-        <nav class="n navbar navbar-expand-sm navbar-light bg-light">
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a href="#"><img class="img-responsive2"       
-                 src="/static/images/logo.png" width="60" height="57"></a>
-                    <ul class="navbar-nav">
-                <div class="v collapse navbar-collapse" id="navbarMenu">
-                    <ul class="navbar-nav">
-                        <li style="text-align: right" class="nav-item">
-                            <a href="{{url_for('home')}}" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="{{url_for('about_us')}}" class="nav-link">About Us</a>
-                      </li>
-                      <li class="nav-item">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/view.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/static/css/view.css"> -->
+
+
+    <nav class="n navbar navbar-expand-sm navbar-light bg-light">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="#"><img class="img-responsive2" src="/static/images/logo.png" width="60" height="57"></a>
+        <ul class="navbar-nav">
+            <div class="v collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li style="text-align: right" class="nav-item">
+                        <a href="{{url_for('home')}}" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('about_us')}}" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{url_for('share')}}" class="nav-link">Share Your Story</a>
-                        </li>
-                        <li class="nav-item">
+                    </li>
+                    <li class="nav-item">
                         <a href="{{url_for('view')}}" class="nav-link">View All Stories</a>
-                        </li>
-                        <li class="nav-item">
-                            <span class="nav-link" onclick="do_check()" prevent>Add Program</span>
-                          </li>
-                            <li class="nav-item">
-                                    <a href="{{url_for('show')}}" class="nav-link">View All Programs</a>
-                                    </li>
-                          
-                      <!--   <li >
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" onclick="do_check()" prevent>Add Program</span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('show')}}" class="nav-link">View All Programs</a>
+                    </li>
+
+                    <!--   <li >
                         <a href="{{url_for('home_he')}}" class="nav-link" style="margin-left: 90%;">Hebrew</a></li> -->
-                    </ul></ul>
-                    <!-- <li> -->
-                  <div class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="margin-left: 350%; color: #21252987;font-size: 12px;"><img src="/static/images/globe.png" style="max-width: 30px;">
-                    Language
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="margin-left: 340%;" >
-                    <a class="dropdown-item" href="{{url_for('home')}}" style="font-size: 12px;">English</a>
-                    <a class="dropdown-item" href="{{url_for('home_he')}}" style="font-size: 12px;">עברית</a>
-                    <a class="dropdown-item" href="{{url_for('home_ar')}}" style="font-size: 12px;">عربى</a>
-                  </div>
-                </div>
-          <!--         <a href="{{url_for('home_he')}}" id="heb" class="nav-link" style="margin-left: 47%; color: #21252987;font-size: 10px;">Hebrew</a> -->
-                    
-                </div>
-            </nav>
-    <center><form id="view" method="GET" action="/view_stories">
-<!--     <h1>Stories</h1>
- -->    <table width="50%">
-            {% for i in stories %}
-            <tr><td class="story">
-                <center>
-            <!-- Before: <img src="/static/images/before{{i.id}}" style="width: 400px;height: 200px;"><br> -->
-            <div class="row">
-                    <div class="col"></div>
-                <div class="col">Before:<br> <img src="/static/images/before{{i.id}}" style="width: 375px; height: 250px;"></div>
-                <div class="col">After:<br> <img src="/static/images/after{{i.id}}" style="width: 375px; height: 250px;"></div>
-                <div class="col"></div>
+                </ul>
+        </ul>
+        <!-- <li> -->
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"
+                style="margin-left: 350%; color: #21252987;font-size: 12px;"><img src="/static/images/globe.png"
+                    style="max-width: 30px;">
+                Language
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="margin-left: 340%;">
+                <a class="dropdown-item" href="{{url_for('home')}}" style="font-size: 12px;">English</a>
+                <a class="dropdown-item" href="{{url_for('home_he')}}" style="font-size: 12px;">עברית</a>
+                <a class="dropdown-item" href="{{url_for('home_ar')}}" style="font-size: 12px;">عربى</a>
             </div>
-            <div class="row">
-                <div class="col"></div>
-                
-                    <div class="col">Name: {{i.name}}</div>
-                    <div class="col"></div>
-                    
-                    <div class="col">Age: {{i.age}}</div>
-                    <div class="col"></div>
-                    
-                    <div class="col">Story: <br>{{i.content}}</div>
-                    <div class="col"></div>
-                    
+        </div>
+        <!--         <a href="{{url_for('home_he')}}" id="heb" class="nav-link" style="margin-left: 47%; color: #21252987;font-size: 10px;">Hebrew</a> -->
+
+        </div>
+    </nav>
+        <form id="view" method="GET" action="/view_stories">
+            <!--     <h1>Stories</h1> -->
+
+
+
+
+
+            {% for i in stories %}
+            <div class="container">
+                <div class="row">
+                    <div class="card" style=" width: 60%; line-height: 20px; margin: 2% auto;
+                    float: none;">
+                        <img class="card-img-top" src="/static/images/before{{i.id}}">
+                        <div class="card-body">
+
+
+                            <h5 class="card-title">{{i.name}}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Age: {{i.age}}</h6>
+                            <div class="card-text">
+                                <p>{{i.content}}</p>
+                            </div>
+                            <img class="card-img-top" src="/static/images/after{{i.id}}">
+                        </div>
+                    </div>
                 </div>
-            </center></td></tr><br><br>
-            <script>setBackground();</script>
+            </div>
+
             {% endfor %}
-        </table>
-    </form></center>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
     <script src="/static/JS/popup.js"></script>
 </body>
+
 </html>
