@@ -50,24 +50,27 @@
               <a href="{{url_for('show')}}" class="nav-link">View All Programs</a>
             </li>
 
-            <!--   <li >
-              <a href="{{url_for('home_he')}}" class="nav-link" style="margin-left: 90%;">Hebrew</a></li> -->
+            <li>
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false"
+                  style="margin-left: 350%; color: #21252987;font-size: 12px;"><img src="/static/images/globe.png"
+                    style="max-width: 30px;">
+                  Language
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"
+                  style="margin-left: 340%;margin-right: 10px;">
+                  <a class="dropdown-item" href="{{url_for('home')}}" style="font-size: 12px;">English</a>
+                  <a class="dropdown-item" href="{{url_for('home_he')}}" style="font-size: 12px;">עברית</a>
+                  <a class="dropdown-item" href="{{url_for('home_ar')}}" style="font-size: 12px;">عربى</a>
+                </div>
+              </div>
+            </li>
           </ul>
       </ul>
       <!-- <li> -->
 
-      <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false" style="margin-left: 350%; color: #21252987;font-size: 12px;"><img
-            src="/static/images/globe.png" style="max-width: 30px;">
-          Language
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="margin-left: 340%;margin-right: 10px;">
-          <a class="dropdown-item" href="{{url_for('home')}}" style="font-size: 12px;">English</a>
-          <a class="dropdown-item" href="{{url_for('home_he')}}" style="font-size: 12px;">עברית</a>
-          <a class="dropdown-item" href="{{url_for('home_ar')}}" style="font-size: 12px;">عربى</a>
-        </div>
-      </div>
+
       <!--         <a href="{{url_for('home_he')}}" id="heb" class="nav-link" style="margin-left: 47%; color: #21252987;font-size: 10px;">Hebrew</a> -->
     </nav>
   </div>
