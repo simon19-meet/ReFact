@@ -277,6 +277,10 @@ def show():
 		programs=display_programs()
 		return render_template('info.html',programs=programs)
 
+@app.route('/map',methods=['GET','POST'])
+def map():
+	return render_template('map.html')
+
 if __name__ == '__main__':
 	app.run(debug=True)
 
